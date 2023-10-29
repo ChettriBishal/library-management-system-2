@@ -84,7 +84,7 @@ def visitor_menu(visitor):
                 print(f"No book with name {bookname} found!")
             else:
                 book_cnt = get_item(sql_query.NO_OF_BOOKS_OF_SAME_NAME,(bookname,))
-                print(f"Number of copies of `{bookname}`: {book_cnt}")
+                print(f"Number of copies of `{bookname}`: {book_cnt[0]}")
 
         elif choice == '2':
             visitor.sort_books_by_rating()
@@ -105,9 +105,9 @@ def visitor_menu(visitor):
             if books is None:
                 print(f"{visitor.username} has not issued any books yet!")
             else:
-                books = [Book(*book) for book in books]
+                books = [BookIssue(*book) for book in books]
                 for book in books:
-                    book.show_book_details()
+                    book.show_issue_details()
 
         elif choice == '7':
             records = get_many_items(sql_query.BOOK_ISSUED, (visitor.username,))
@@ -119,10 +119,11 @@ def visitor_menu(visitor):
                     print("--------------------")
 
         elif choice == '8':
-            bookname = input("\nEnter the name of the book to return: ")
-            check = visitor.return_book(bookname)
+            book_id = input("\nEnter the book id to return: ")
+            bookname = get_item(sql_query.BOOK_NAME,(book_id,))
+            check = visitor.return_book(book_id)
             if check:
-                print(f"Book `{bookname}` returned successfully!")
+                print(f"Book `{bookname[0]}` returned successfully!")
             else:
                 print(f"`{visitor.username}` has not issued this book!")
 

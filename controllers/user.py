@@ -5,6 +5,7 @@ from models.database import get_many_items, get_item, remove_item
 
 from utils import sql_query
 from utils.exceptions import UserDoesNotExist
+from utils.uuid_generator import generate_uuid
 from controllers.book import Book
 from controllers.book_issue import BookIssue
 
@@ -38,7 +39,7 @@ class User:
             book.show_book_details()
 
     def group_books_by_genre(self, genre):
-        books = get_many_items(sql_query.GET_BOOKS_BY_PRICE, (genre,))
+        books = get_many_items(sql_query.GROUP_BOOKS_BY_GENRE, (genre,))
         if books is not None:
             books = [Book(*book) for book in books]
             for book in books:
@@ -105,7 +106,7 @@ class Visitor(User):
         issue_date = datetime.date.today()
         due_date = issue_date + datetime.timedelta(days=60)
         date_returned = DEFAULT_RETURN_DATE
-        issue_info = BookIssue(self.username, book_id, issue_date, due_date, date_returned)
+        issue_info = BookIssue(generate_uuid(), self.username, book_id, issue_date, due_date, date_returned)
 
         issue_info.add_book(bookname)
 
@@ -113,10 +114,11 @@ class Visitor(User):
         books = get_many_items(sql_query.BOOK_ISSUED, (self.username,))
         return books
 
-    def return_book(self, bookname):
-        issue_id = get_item(sql_query.ISSUE_ID,(bookname,self.username,))
+    def return_book(self, book_id):
+        issue_id = get_item(sql_query.ISSUE_ID, (book_id,))
         if issue_id is None:
             return False
-        issue_id = issue_id[0][0]
+        issue_id = issue_id[0]
+
         remove_item(sql_query.BOOK_RETURN, (issue_id,))
         return True

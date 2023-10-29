@@ -6,4 +6,4 @@ from controllers.user import Librarian
 
 from helpers import home_menu_helper
 
-home_menu_helper.login()
+home_menu_helper.home()

@@ -66,11 +66,11 @@ SELECT * FROM books ORDER BY price ASC
 """
 
 GROUP_BOOKS_BY_GENRE = """
-SELECT name, author, price, rating FROM books WHERE genre=?
+SELECT * FROM books WHERE genre=?
 """
 
 GET_UNISSUED_BOOKS_BY_NAME = """
-SELECT books.name
+SELECT books.book_id
 FROM books
 LEFT JOIN books_issue ON books.book_id = books_issue.book_id
 WHERE books.name = ? AND books_issue.book_id IS NULL;
@@ -92,17 +92,18 @@ INSERT INTO books_issue (issue_id, username, book_id, issue_date, due_date, date
 VALUES (?, ?, ?, ?, ?, ?)
 """
 
+BOOK_NAME = """
+SELECT name FROM books WHERE book_id = ?
+"""
+
 BOOK_ISSUED = """
 SELECT * FROM books_issue
 WHERE username = ?
 """
 
 ISSUE_ID = """
-SELECT books_issue.issue_id
-FROM books_issue
-INNER JOIN books ON books_issue.book_id = books.book_id
-WHERE books_issue.username = ?
-AND books.name = ?
+SELECT issue_id FROM books_issue 
+WHERE book_id = ?
 """
 
 BOOK_RETURN = """

@@ -41,5 +41,3 @@ class Book:
         remove_item(REMOVE_BOOK_BY_ID, self.book_id)
         print(f"A copy of {self.name} is removed successfully!!")
 
-    def issue_book(self):
-        pass
