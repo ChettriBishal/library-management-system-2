@@ -2,32 +2,37 @@ GET_USER_BY_USERNAME = f"""
 SELECT * FROM users WHERE username = ?
 """
 
-GET_PASSWORD = f"""
-SELECT password FROM users WHERE username = ?
+ADD_USER = """
+INSERT INTO users VALUES(?,?,?,?)
 """
 
 SELECT_ROLE = """
 SELECT role FROM users WHERE username = ?
 """
 
+GET_PASSWORD = f"""
+SELECT password FROM users WHERE username = ?
+"""
+
 GET_ALL_USERS = """
 SELECT username, role FROM users
+"""
+
+REMOVE_USER = """
+DELETE FROM users WHERE username = ?
 """
 
 CREATE_USER_TABLE = """
 CREATE TABLE IF NOT EXISTS users(user_id text primary key, username text,password text, role text)
 """
 
-ADD_USER = """
-INSERT INTO users VALUES(?,?,?,?)
-"""
-
 GET_USER = """
 SELECT * FROM users WHERE username=?
 """
 
-REMOVE_USER = """
-DELETE FROM users WHERE username = ?
+
+ADD_BOOK = """
+INSERT INTO books VALUES(?,?,?,?,?,?)
 """
 
 CREATE_BOOK_ISSUE_TABLE = f"""CREATE TABLE IF NOT EXISTS books_issue(
@@ -64,3 +69,5 @@ AND books.name = ?
 BOOK_RETURN = """
 DELETE FROM books_issue WHERE issue_id = ?
 """
+
+

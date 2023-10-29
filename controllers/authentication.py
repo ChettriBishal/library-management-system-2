@@ -1,7 +1,8 @@
-from bcrypt import checkpw
+from bcrypt import checkpw, hashpw, gensalt
 
 from utils import sql_query
-from models.database import get_item
+from models.database import get_item, insert_item
+from utils.uuid_generator import generate_uuid
 
 
 class Authentication:
@@ -12,9 +13,14 @@ class Authentication:
         self.role = role
 
     def _check_password(self, hashed_password):
-        if checkpw(self.password, hashed_password):
+        if checkpw(self.password.encode('utf8'), hashed_password):
             return True
         return False
+
+    def _hash_password(self):
+        salt = gensalt()
+        hashed_password = hashpw(self.password.encode('utf-8'), salt)
+        return hashed_password
 
     def login(self):
         check_user = get_item(sql_query.GET_USER_BY_USERNAME, (self.username,))
@@ -30,4 +36,10 @@ class Authentication:
                 return None
 
     def signup(self):
-        pass
+        check_user = get_item(sql_query.GET_USER_BY_USERNAME, (self.username,))
+        if check_user:
+            print(f"Choose a different username!")
+        else:
+            hashed_password = self._hash_password()
+            user_info = (generate_uuid(), self.username, hashed_password, self.role,)
+            insert_item(sql_query.ADD_USER, user_info)

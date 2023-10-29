@@ -27,7 +27,7 @@ class DBConnection:
 def get_item(query, data):
     with DBConnection() as cursor:
         try:
-            response = cursor.execute(query).fetchone()
+            response = cursor.execute(query, data).fetchone()
         except sqlite3.Error as error:
             print(error)
         return response
@@ -36,14 +36,25 @@ def get_item(query, data):
 def get_many_items(query, data):
     with DBConnection() as cursor:
         try:
-            response = cursor.execute(query).fetchall()
+            if data:
+                response = cursor.execute(query, data).fetchall()
+            else:
+                response = cursor.execute(query).fetchall()
         except sqlite3.Error as error:
             print(error)
         return response
 
 
 def insert_item(query, data):
-    with DBConnection as cursor:
+    with DBConnection() as cursor:
+        try:
+            cursor.execute(query, data)
+        except sqlite3.Error as error:
+            print(error)
+
+
+def remove_item(query, data):
+    with DBConnection() as cursor:
         try:
             cursor.execute(query, data)
         except sqlite3.Error as error:
