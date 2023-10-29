@@ -27,6 +27,9 @@ GET_USER = """
 SELECT * FROM users WHERE username=?
 """
 
+GET_USER_ROLE = """
+SELECT role FROM users WHERE username=?
+"""
 
 ADD_BOOK = """
 INSERT INTO books VALUES(?,?,?,?,?,?)
@@ -47,6 +50,24 @@ author text NOT NULL, rating int NOT NULL,price real NOT NULL, quantity int NOT 
 """
 
 GET_BOOK_BY_NAME = "SELECT * FROM books WHERE name=?"
+
+NO_OF_BOOKS_OF_SAME_NAME = """
+    SELECT COUNT(*) as book_count
+    FROM books
+    WHERE name = ?
+"""
+
+GET_BOOKS_BY_RATING = """
+SELECT * FROM books ORDER BY rating DESC
+"""
+
+GET_BOOKS_BY_PRICE = """
+SELECT * FROM books ORDER BY price ASC
+"""
+
+GROUP_BOOKS_BY_GENRE = """
+SELECT name, author, price, rating FROM books WHERE genre=?
+"""
 
 
 CREATE_BOOK_ISSUE_TABLE = f"""CREATE TABLE IF NOT EXISTS books_issue(

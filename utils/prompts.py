@@ -6,6 +6,7 @@ HOME = f"""
 {render.renderText("Library Management System")}
 1. Sign Up
 2. Sign In
+3. Exit
 
 Enter your choice: """
 

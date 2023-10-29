@@ -1,5 +1,5 @@
 import sqlite3
-from helpers.path import USER_DB
+from helpers.path_helper import USER_DB
 
 
 class DBConnection:

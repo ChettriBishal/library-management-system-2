@@ -3,7 +3,7 @@ from utils.sql_query import ADD_BOOK, REMOVE_BOOK_BY_ID
 
 
 class Book:
-    def __init__(self, book_id, name, author, price, rating, genre):
+    def __init__(self, book_id, name, author, rating, price, genre):
         (
             self.book_id,
             self.name,
