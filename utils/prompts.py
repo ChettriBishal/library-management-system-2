@@ -4,6 +4,7 @@ render = Figlet(font='slant')
 
 HOME = f"""
 {render.renderText("Library Management System")}
+
 1. Sign Up
 2. Sign In
 3. Exit
@@ -12,6 +13,9 @@ Enter your choice: """
 
 ADMIN_MENU = f"""
 {render.renderText('ADMIN')}
+
+------------------Admin Menu------------------
+
 1. Add Librarian
 2. List Users
 3. Remove User
@@ -19,18 +23,19 @@ ADMIN_MENU = f"""
 
 Enter your choice: """
 
-USER_MENU = f"""
+VISITOR_MENU = f"""
 {render.renderText('USER')}
-1. List Books
-2. Query Book
-3. Sort books by rating
-4. Sort books by price
-5. Group by genre
-6. Issue Book
-7. Check Issued Books
-8. Check Dues
-9. Return Book
-10. Exit
+
+------------------Visitor Menu------------------
+1. Query Book
+2. List books by rating
+3. Sort books by price
+4. Group by genre
+5. Issue Book
+6. Check Issued Books
+7. Check Dues
+8. Return Book
+9. Exit
 
 Enter your choice: """
 

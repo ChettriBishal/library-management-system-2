@@ -69,6 +69,12 @@ GROUP_BOOKS_BY_GENRE = """
 SELECT name, author, price, rating FROM books WHERE genre=?
 """
 
+GET_UNISSUED_BOOKS_BY_NAME = """
+SELECT books.name
+FROM books
+LEFT JOIN books_issue ON books.book_id = books_issue.book_id
+WHERE books.name = ? AND books_issue.book_id IS NULL;
+"""
 
 CREATE_BOOK_ISSUE_TABLE = f"""CREATE TABLE IF NOT EXISTS books_issue(
             issue_id TEXT PRIMARY KEY, 

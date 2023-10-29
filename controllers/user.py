@@ -1,11 +1,15 @@
+import datetime
+
 from controllers.authentication import Authentication
 from models.database import get_many_items, get_item, remove_item
 
 from utils import sql_query
 from utils.exceptions import UserDoesNotExist
 from controllers.book import Book
+from controllers.book_issue import BookIssue
 
 from helpers.input_helper import get_book_details
+from helpers.constants_helper import DEFAULT_RETURN_DATE
 
 
 class User:
@@ -44,6 +48,9 @@ class User:
 
 
 class Admin(User):
+    def __init__(self, username, password, role):
+        super().__init__(username, password, role)
+
     def register_librarian(self, username, password, user_role="librarian"):
         new_librarian = Authentication(username, password, user_role)
         new_librarian.signup()
@@ -68,6 +75,9 @@ class Admin(User):
 
 
 class Librarian(User):
+    def __init__(self, username, password, role):
+        super().__init__(username, password, role)
+
     def add_book(self):
         book_info = get_book_details()
         book_info.add_book()
@@ -84,3 +94,26 @@ class Librarian(User):
 class Visitor(User):
     def __init__(self, username, password, role):
         super().__init__(username, password, role)
+
+    def issue_book(self, bookname):
+        books = get_many_items(sql_query.GET_UNISSUED_BOOKS_BY_NAME, (bookname,))
+        if books is None:
+            return None
+        book_to_issue = books[0]
+        book_id = book_to_issue[0]
+
+        issue_date = datetime.date.today()
+        due_date = issue_date + datetime.timedelta(days=60)
+        date_returned = DEFAULT_RETURN_DATE
+        issue_info = BookIssue(self.username, book_id, issue_date, due_date, date_returned)
+
+        issue_info.add_book(bookname)
+
+    def return_book(self, username, bookname):
+        books = get_many_items(sql_query.GET_UNISSUED_BOOKS_BY_NAME, (bookname,))
+        if books is None:
+            return None
+        book_to_issue = books[0]
+        book_id = book_to_issue[0]
+
+        issue_info = BookIssue(self.username, book_id, issue_date, due_date, date_returned)
