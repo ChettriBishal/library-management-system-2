@@ -1,3 +1,5 @@
+import datetime
+
 from models.database import insert_item, remove_item, get_many_items
 from utils import sql_query
 from utils.uuid_generator import generate_uuid
@@ -38,5 +40,21 @@ class BookIssue:
         insert_item(sql_query.ADD_BOOK, self.get_issue_details)
         print(f"{bookname} is successfully issued !!")
 
-    def remove_book(self):
-        remove_item(sql_query.REMOVE_BOOK_BY_ID, self.book_id)
+    def get_dues(self):
+        # records = get_many_items(sql_query.BOOK_ISSUED, (self.username,))
+        # books = [BookIssue(*book) for book in records]
+
+        due_date = datetime.datetime.strptime(self.due_date, "%Y-%m-%d")
+        current_date = datetime.datetime.now()
+        dues = 0
+        if current_date > due_date:
+            delta = current_date - due_date
+            days = delta.days
+            dues = days * 3
+
+        return dues
+
+
+
+
+

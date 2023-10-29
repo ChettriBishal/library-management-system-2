@@ -93,10 +93,8 @@ VALUES (?, ?, ?, ?, ?, ?)
 """
 
 BOOK_ISSUED = """
-SELECT books.name, books.author, books_issue.issue_date, books_issue.due_date, books_issue.date_returned
-FROM books_issue
-INNER JOIN books ON books_issue.book_id = books.book_id
-WHERE books_issue.username = ?
+SELECT * FROM books_issue
+WHERE username = ?
 """
 
 ISSUE_ID = """

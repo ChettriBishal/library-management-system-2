@@ -109,11 +109,14 @@ class Visitor(User):
 
         issue_info.add_book(bookname)
 
-    def return_book(self, username, bookname):
-        books = get_many_items(sql_query.GET_UNISSUED_BOOKS_BY_NAME, (bookname,))
-        if books is None:
-            return None
-        book_to_issue = books[0]
-        book_id = book_to_issue[0]
+    def books_issued(self):
+        books = get_many_items(sql_query.BOOK_ISSUED, (self.username,))
+        return books
 
-        issue_info = BookIssue(self.username, book_id, issue_date, due_date, date_returned)
+    def return_book(self, bookname):
+        issue_id = get_item(sql_query.ISSUE_ID,(bookname,self.username,))
+        if issue_id is None:
+            return False
+        issue_id = issue_id[0][0]
+        remove_item(sql_query.BOOK_RETURN, (issue_id,))
+        return True
