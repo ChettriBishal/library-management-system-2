@@ -22,9 +22,6 @@ REMOVE_USER = """
 DELETE FROM users WHERE username = ?
 """
 
-CREATE_USER_TABLE = """
-CREATE TABLE IF NOT EXISTS users(user_id text primary key, username text,password text, role text)
-"""
 
 GET_USER = """
 SELECT * FROM users WHERE username=?
@@ -34,6 +31,23 @@ SELECT * FROM users WHERE username=?
 ADD_BOOK = """
 INSERT INTO books VALUES(?,?,?,?,?,?)
 """
+
+REMOVE_BOOK_BY_ID = """
+DELETE FROM books WHERE book_id = ?
+"""
+
+CREATE_USER_TABLE = """
+CREATE TABLE IF NOT EXISTS users(user_id text primary key, username text,password text, role text)
+"""
+
+CREATE_BOOK_TABLE = f"""
+CREATE TABLE IF NOT EXISTS books
+(book_id text primary key, name text NOT NULL,
+author text NOT NULL, rating int NOT NULL,price real NOT NULL, quantity int NOT NULL, genre text)
+"""
+
+GET_BOOK_BY_NAME = "SELECT * FROM books WHERE name=?"
+
 
 CREATE_BOOK_ISSUE_TABLE = f"""CREATE TABLE IF NOT EXISTS books_issue(
             issue_id TEXT PRIMARY KEY, 

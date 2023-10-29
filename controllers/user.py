@@ -4,8 +4,9 @@ from models.database import get_many_items, get_item, remove_item
 
 
 class User:
-    def __init__(self, username, role):
+    def __init__(self, username, password, role):
         self.username = username
+        self.password = password
         self.role = role
 
     def user_details(self):
@@ -40,4 +41,7 @@ class Librarian(User):
 
 
 class Visitor(User):
-    pass
+    def __init__(self, username, password, role):
+        super().__init__(username, password, role)
+    
+

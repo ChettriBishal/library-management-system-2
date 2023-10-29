@@ -67,3 +67,11 @@ def update_item(query, data):
             cursor.execute(query, data)
         except sqlite3.Error as error:
             print(error)
+
+
+def execute_query(query):
+    with DBConnection() as cursor:
+        try:
+            cursor.execute(query)
+        except sqlite3.Error as error:
+            print(error)

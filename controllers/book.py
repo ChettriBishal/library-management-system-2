@@ -1,5 +1,5 @@
-from models.database import insert_item
-from utils.sql_query import ADD_BOOK
+from models.database import insert_item, remove_item, get_item
+from utils.sql_query import ADD_BOOK, REMOVE_BOOK_BY_ID
 
 
 class Book:
@@ -18,8 +18,8 @@ class Book:
         return (self.book_id,
                 self.name,
                 self.author,
-                self.price,
                 self.rating,
+                self.price,
                 self.genre)
 
     def show_book_details(self):
@@ -35,8 +35,11 @@ class Book:
 
     def add_book(self):
         insert_item(ADD_BOOK, self.get_book_details)
-        print(f"{self.name} is inserted!!")
+        print(f"{self.name} is added successfully!!")
 
     def remove_book(self):
-        pass
+        remove_item(REMOVE_BOOK_BY_ID, self.book_id)
+        print(f"A copy of {self.name} is removed successfully!!")
 
+    def issue_book(self):
+        pass
