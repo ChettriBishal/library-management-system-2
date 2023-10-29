@@ -1,13 +1,16 @@
 import sqlite3
+from helpers.path import USER_DB
 
 
 class DBConnection:
-    def __init__(self, host):
+    def __init__(self):
         self.connection = None
-        self.host = host
+        self.host = USER_DB
+        self.cursor = None
 
     def __enter__(self) -> sqlite3.Connection:
         self.connection = sqlite3.connect(self.host)
+        self.cursor = self.connection.cursor()
         return self.connection
 
     def __exit__(self, exc_type, exc_val, exc_tb):
@@ -19,3 +22,37 @@ class DBConnection:
         else:
             self.connection.commit()
             self.connection.close()
+
+
+def get_item(query, data):
+    with DBConnection() as cursor:
+        try:
+            response = cursor.execute(query).fetchone()
+        except sqlite3.Error as error:
+            print(error)
+        return response
+
+
+def get_many_items(query, data):
+    with DBConnection() as cursor:
+        try:
+            response = cursor.execute(query).fetchall()
+        except sqlite3.Error as error:
+            print(error)
+        return response
+
+
+def insert_item(query, data):
+    with DBConnection as cursor:
+        try:
+            cursor.execute(query, data)
+        except sqlite3.Error as error:
+            print(error)
+
+
+def update_item(query, data):
+    with DBConnection() as cursor:
+        try:
+            cursor.execute(query, data)
+        except sqlite3.Error as error:
+            print(error)
