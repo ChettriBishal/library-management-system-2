@@ -1,0 +1,2 @@
+USER_DB = "lms.db"
+DEFAULT_RETURN_DATE = 0
