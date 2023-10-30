@@ -1,5 +1,4 @@
 import maskpass
-
 from utils import prompts, sql_query
 from controllers.authentication import Authentication
 from helpers import input_helper
@@ -35,7 +34,7 @@ def login():
     print("---------------SIGN IN---------------")
     username = input("Enter the username: ")
     password = maskpass.advpass(f"Enter the password for `{username}: ")
-    role = get_item(sql_query.GET_USER_ROLE, (username,))
+    role = get_item(sql_query.GET_USER_ROLE, (username, ))
     try:
         if role is None:
             raise UserDoesNotExist(username)
@@ -55,7 +54,7 @@ def login():
         visitor = Visitor(username, password, role)
         visitor_menu(visitor)
     elif role == 'librarian':
-        librarian = Librarian(username,password,role)
+        librarian = Librarian(username, password, role)
         librarian_menu(librarian)
 
 
@@ -87,7 +86,8 @@ def visitor_menu(visitor):
             if response is None:
                 print(f"No book with name {bookname} found!")
             else:
-                book_cnt = get_item(sql_query.NO_OF_BOOKS_OF_SAME_NAME,(bookname,))
+                book_cnt = get_item(sql_query.NO_OF_BOOKS_OF_SAME_NAME,
+                                    (bookname, ))
                 print(f"Number of copies of `{bookname}`: {book_cnt[0]}")
 
         elif choice == '2':
@@ -114,7 +114,8 @@ def visitor_menu(visitor):
                     book.show_issue_details()
 
         elif choice == '7':
-            records = get_many_items(sql_query.BOOK_ISSUED, (visitor.username,))
+            records = get_many_items(sql_query.BOOK_ISSUED,
+                                     (visitor.username, ))
             books = [BookIssue(*book) for book in records]
             if records:
                 print(f"\nBooks issued by user `{visitor.username}`")
@@ -124,7 +125,7 @@ def visitor_menu(visitor):
 
         elif choice == '8':
             book_id = input("\nEnter the book id to return: ")
-            bookname = get_item(sql_query.BOOK_NAME,(book_id,))
+            bookname = get_item(sql_query.BOOK_NAME, (book_id, ))
             check = visitor.return_book(book_id)
             if check:
                 print(f"Book `{bookname[0]}` returned successfully!")
@@ -152,4 +153,3 @@ def librarian_menu(librarian):
             break
         else:
             print("Invalid Choice!")
-
