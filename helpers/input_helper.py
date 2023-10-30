@@ -1,10 +1,6 @@
-import os
-import stdiomask
-from collections import namedtuple
+import maskpass
 from utils.uuid_generator import generate_uuid
 from controllers.book import Book
-from models.database import get_item
-from utils import sql_query
 
 
 def get_book_details():
@@ -18,12 +14,12 @@ def get_book_details():
     genre = input("Enter the genre of the book: ")
 
     book_id = generate_uuid()
-    return Book(book_id, name, author, price, rating, genre)
+    return Book(book_id, name, author, rating, price, genre)
 
 
-def get_visitor_details(user_role = "visitor"):
+def get_visitor_details(user_role="visitor"):
     username = input("Enter username: ")
-    password = stdiomask.getpass(prompt=f"Enter password for {username}: ", mask="*")
+    password = maskpass.advpass(f"Enter password for {username}: ")
     user = (username, password, user_role)
     return user
 

@@ -15,7 +15,7 @@ SELECT password FROM users WHERE username = ?
 """
 
 GET_ALL_USERS = """
-SELECT username, role FROM users
+SELECT username, password, role FROM users
 """
 
 REMOVE_USER = """

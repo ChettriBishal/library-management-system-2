@@ -38,6 +38,6 @@ class Book:
         print(f"{self.name} is added successfully!!")
 
     def remove_book(self):
-        remove_item(REMOVE_BOOK_BY_ID, self.book_id)
+        remove_item(REMOVE_BOOK_BY_ID, (self.book_id,))
         print(f"A copy of {self.name} is removed successfully!!")
 

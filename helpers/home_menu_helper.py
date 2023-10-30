@@ -1,9 +1,10 @@
+import maskpass
+
 from utils import prompts, sql_query
 from controllers.authentication import Authentication
 from helpers import input_helper
 from models.database import get_item
 from controllers.user import Admin, Visitor, Librarian
-from controllers.book import Book
 from controllers.book_issue import BookIssue
 
 from utils.exceptions import UserDoesNotExist
@@ -33,7 +34,7 @@ def signup():
 def login():
     print("---------------SIGN IN---------------")
     username = input("Enter the username: ")
-    password = input(f"Enter the password for `{username}: ")
+    password = maskpass.advpass(f"Enter the password for `{username}: ")
     role = get_item(sql_query.GET_USER_ROLE, (username,))
     try:
         if role is None:
@@ -62,11 +63,14 @@ def admin_menu(admin):
     while True:
         choice = input(prompts.ADMIN_MENU)
         if choice == '1':
-            admin.register_librarian()
+            username = input("Enter the username: ")
+            password = maskpass.advpass(f"Enter the password for {username}: ")
+            admin.register_librarian(username, password)
         elif choice == '2':
             admin.list_users()
         elif choice == '3':
-            admin.remove_user()
+            username = input("Enter the username to remove: ")
+            admin.remove_user(username)
         elif choice == '4':
             break
         else:
@@ -142,7 +146,8 @@ def librarian_menu(librarian):
         elif choice == '2':
             librarian.sort_books_by_rating()
         elif choice == '3':
-            librarian.remove_book()
+            name = input("Enter the name of the book to remove: ")
+            librarian.remove_book(name)
         elif choice == '4':
             break
         else:
