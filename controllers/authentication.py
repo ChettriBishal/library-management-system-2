@@ -25,7 +25,8 @@ class Authentication:
         return hashed_password
 
     def login(self):
-        check_user = get_item(sql_query.GET_USER_BY_USERNAME, (self.username,))
+        check_user = get_item(sql_query.GET_USER_BY_USERNAME,
+                              (self.username, ))
         if check_user is None:
             print(f"User with username `{self.username}` does not exist!")
         else:
@@ -36,16 +37,22 @@ class Authentication:
                 self.log_obj.logger.info(f"{self.username} logged in")
                 return check_user
             else:
-                self.log_obj.logger.info(f"{self.username} entered wrong password")
+                self.log_obj.logger.info(
+                    f"{self.username} entered wrong password")
                 return None
 
     def signup(self):
-        check_user = get_item(sql_query.GET_USER_BY_USERNAME, (self.username,))
+        check_user = get_item(sql_query.GET_USER_BY_USERNAME,
+                              (self.username, ))
         if check_user:
             print(f"Choose a different username!")
         else:
             hashed_password = self._hash_password()
-            user_info = (generate_uuid(), self.username, hashed_password, self.role,)
+            user_info = (
+                generate_uuid(),
+                self.username,
+                hashed_password,
+                self.role,
+            )
             insert_item(sql_query.ADD_USER, user_info)
             self.log_obj.logger.info(f"{self.username} has signed up")
-

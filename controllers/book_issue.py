@@ -1,6 +1,5 @@
 import os
 import datetime
-
 from models.database import insert_item
 from utils import sql_query
 from utils.logs import Log
@@ -9,26 +8,16 @@ from utils.logs import Log
 class BookIssue:
     log_obj = Log(os.path.basename(__file__))
 
-    def __init__(self, issue_id, username, book_id, issue_date, due_date, date_returned):
-        (
-            self.issue_id,
-            self.username,
-            self.book_id,
-            self.issue_date,
-            self.due_date,
-            self.date_returned
-        ) = issue_id, username, book_id, issue_date, due_date, date_returned
+    def __init__(self, issue_id, username, book_id, issue_date, due_date,
+                 date_returned):
+        (self.issue_id, self.username, self.book_id, self.issue_date,
+         self.due_date, self.date_returned
+         ) = issue_id, username, book_id, issue_date, due_date, date_returned
 
     @property
     def get_issue_details(self):
-        return (
-            self.issue_id,
-            self.username,
-            self.book_id,
-            self.issue_date,
-            self.due_date,
-            self.date_returned
-        )
+        return (self.issue_id, self.username, self.book_id, self.issue_date,
+                self.due_date, self.date_returned)
 
     def show_issue_details(self):
         print("------------------")

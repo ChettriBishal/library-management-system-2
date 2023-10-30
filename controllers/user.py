@@ -1,19 +1,17 @@
 import datetime
-
 from controllers.authentication import Authentication
 from models.database import get_many_items, get_item, remove_item
-
 from utils import sql_query
 from utils.exceptions import UserDoesNotExist
 from utils.uuid_generator import generate_uuid
 from controllers.book import Book
 from controllers.book_issue import BookIssue
-
 from helpers.input_helper import get_book_details
 from helpers.constants_helper import DEFAULT_RETURN_DATE
 
 
 class User:
+
     def __init__(self, username, password, role):
         self.username = username
         self.password = password
@@ -23,7 +21,7 @@ class User:
         return f"Username: {self.username} | Role: {self.role}"
 
     def query_book(self, name):
-        response = get_many_items(sql_query.GET_BOOK_BY_NAME, (name,))
+        response = get_many_items(sql_query.GET_BOOK_BY_NAME, (name, ))
         return response
 
     def sort_books_by_rating(self):
@@ -39,7 +37,7 @@ class User:
             book.show_book_details()
 
     def group_books_by_genre(self, genre):
-        books = get_many_items(sql_query.GROUP_BOOKS_BY_GENRE, (genre,))
+        books = get_many_items(sql_query.GROUP_BOOKS_BY_GENRE, (genre, ))
         if books is not None:
             books = [Book(*book) for book in books]
             for book in books:
@@ -49,6 +47,7 @@ class User:
 
 
 class Admin(User):
+
     def __init__(self, username, password, role):
         super().__init__(username, password, role)
 
@@ -65,17 +64,18 @@ class Admin(User):
             print(user.user_details())
 
     def remove_user(self, username):
-        check_user = get_item(sql_query.GET_USER_BY_USERNAME, (username,))
+        check_user = get_item(sql_query.GET_USER_BY_USERNAME, (username, ))
         try:
             if check_user is None:
                 raise UserDoesNotExist(username)
-            remove_item(sql_query.REMOVE_USER, (username,))
+            remove_item(sql_query.REMOVE_USER, (username, ))
             print(f"{username} successfully removed!!!")
         except UserDoesNotExist as user_error:
             print(user_error)
 
 
 class Librarian(User):
+
     def __init__(self, username, password, role):
         super().__init__(username, password, role)
 
@@ -84,7 +84,7 @@ class Librarian(User):
         book_info.add_book()
 
     def remove_book(self, name):
-        book_to_remove = get_item(sql_query.GET_BOOK_BY_NAME, (name,))
+        book_to_remove = get_item(sql_query.GET_BOOK_BY_NAME, (name, ))
         if book_to_remove is None:
             return False
         book_obj = Book(*book_to_remove)
@@ -93,11 +93,13 @@ class Librarian(User):
 
 
 class Visitor(User):
+
     def __init__(self, username, password, role):
         super().__init__(username, password, role)
 
     def issue_book(self, bookname):
-        books = get_many_items(sql_query.GET_UNISSUED_BOOKS_BY_NAME, (bookname,))
+        books = get_many_items(sql_query.GET_UNISSUED_BOOKS_BY_NAME,
+                               (bookname, ))
         if books is None:
             return None
         book_to_issue = books[0]
@@ -106,19 +108,20 @@ class Visitor(User):
         issue_date = datetime.date.today()
         due_date = issue_date + datetime.timedelta(days=60)
         date_returned = DEFAULT_RETURN_DATE
-        issue_info = BookIssue(generate_uuid(), self.username, book_id, issue_date, due_date, date_returned)
+        issue_info = BookIssue(generate_uuid(), self.username, book_id,
+                               issue_date, due_date, date_returned)
 
         issue_info.add_book(bookname)
 
     def books_issued(self):
-        books = get_many_items(sql_query.BOOK_ISSUED, (self.username,))
+        books = get_many_items(sql_query.BOOK_ISSUED, (self.username, ))
         return books
 
     def return_book(self, book_id):
-        issue_id = get_item(sql_query.ISSUE_ID, (book_id,))
+        issue_id = get_item(sql_query.ISSUE_ID, (book_id, ))
         if issue_id is None:
             return False
         issue_id = issue_id[0]
 
-        remove_item(sql_query.BOOK_RETURN, (issue_id,))
+        remove_item(sql_query.BOOK_RETURN, (issue_id, ))
         return True
