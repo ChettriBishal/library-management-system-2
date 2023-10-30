@@ -1,7 +1,7 @@
 import maskpass
 from utils.uuid_generator import generate_uuid
 from controllers.book import Book
-
+from helpers.validation_helper import validate_password, validate_username
 
 def get_book_details():
     name = input("Enter the name of the book: ")
@@ -18,10 +18,19 @@ def get_book_details():
 
 
 def get_visitor_details(user_role="visitor"):
-    username = input("Enter username: ")
-    password = maskpass.advpass(f"Enter password for {username}: ")
-    user = (username, password, user_role)
-    return user
+    while True:
+        username = input("Enter username: ")
+        if validate_username(username):
+            break
+        else:
+            print("Please enter a valid username")
+    while True:
+        password = maskpass.advpass(f"Enter password for {username}: ")
+        if validate_password(password):
+            user = (username, password, user_role)
+            return user
+        else:
+            print("Please enter a stronger password!")
 
 
 def get_book_query():
