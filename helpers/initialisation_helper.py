@@ -15,3 +15,5 @@ def create_book_issue_table() -> None:
 
 
 create_book_table()
+create_user_table()
+create_book_issue_table()

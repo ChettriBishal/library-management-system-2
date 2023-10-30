@@ -1,11 +1,13 @@
+import os
 from bcrypt import checkpw, hashpw, gensalt
-
 from utils import sql_query
 from models.database import get_item, insert_item
 from utils.uuid_generator import generate_uuid
+from utils.logs import Log
 
 
 class Authentication:
+    log_obj = Log(os.path.basename(__file__))
 
     def __init__(self, username, password, role):
         self.username = username
@@ -31,8 +33,10 @@ class Authentication:
 
             if self._check_password(stored_hashed_password):
                 print(f"Logged in as `{self.role}` successfully!!")
+                self.log_obj.logger.info(f"{self.username} logged in")
                 return check_user
             else:
+                self.log_obj.logger.info(f"{self.username} entered wrong password")
                 return None
 
     def signup(self):
@@ -43,3 +47,5 @@ class Authentication:
             hashed_password = self._hash_password()
             user_info = (generate_uuid(), self.username, hashed_password, self.role,)
             insert_item(sql_query.ADD_USER, user_info)
+            self.log_obj.logger.info(f"{self.username} has signed up")
+

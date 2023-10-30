@@ -1,10 +1,14 @@
+import os
 import datetime
 
 from models.database import insert_item
 from utils import sql_query
+from utils.logs import Log
 
 
 class BookIssue:
+    log_obj = Log(os.path.basename(__file__))
+
     def __init__(self, issue_id, username, book_id, issue_date, due_date, date_returned):
         (
             self.issue_id,
@@ -38,6 +42,7 @@ class BookIssue:
     def add_book(self, bookname):
         insert_item(sql_query.ISSUE_BOOK_QUERY, self.get_issue_details)
         print(f"{bookname} is successfully issued !!")
+        self.log_obj.logger.info(f"{bookname} added into database")
 
     def get_dues(self):
         due_date = datetime.datetime.strptime(self.due_date, "%Y-%m-%d")
@@ -49,8 +54,3 @@ class BookIssue:
             dues = days * 3
 
         return dues
-
-
-
-
-
