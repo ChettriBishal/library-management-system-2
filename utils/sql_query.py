@@ -22,7 +22,6 @@ REMOVE_USER = """
 DELETE FROM users WHERE username = ?
 """
 
-
 GET_USER = """
 SELECT * FROM users WHERE username=?
 """
@@ -109,5 +108,3 @@ WHERE book_id = ?
 BOOK_RETURN = """
 DELETE FROM books_issue WHERE issue_id = ?
 """
-
-

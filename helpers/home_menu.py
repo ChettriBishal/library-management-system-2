@@ -1,7 +1,7 @@
 import maskpass
 from utils import prompts, sql_query
 from controllers.authentication import Authentication
-from helpers import input_helper
+from helpers import take_input
 from models.database import get_item
 from controllers.user import Admin, Visitor, Librarian
 from controllers.book_issue import BookIssue
@@ -25,7 +25,7 @@ def home():
 
 def signup():
     print("---------------SIGN UP---------------")
-    visitor_info = input_helper.get_visitor_details()
+    visitor_info = take_input.get_visitor_details()
     visitor = Authentication(*visitor_info)
     visitor.signup()
 
