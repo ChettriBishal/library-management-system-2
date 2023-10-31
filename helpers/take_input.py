@@ -1,7 +1,7 @@
 import maskpass
 from utils.uuid_generator import generate_uuid
 from controllers.book import Book
-from helpers.validation_helper import validate_password, validate_username
+from helpers.validation import validate_password, validate_username
 
 
 def get_book_details():

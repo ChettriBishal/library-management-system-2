@@ -6,8 +6,8 @@ from utils.exceptions import UserDoesNotExist
 from utils.uuid_generator import generate_uuid
 from controllers.book import Book
 from controllers.book_issue import BookIssue
-from helpers.input_helper import get_book_details
-from helpers.constants_helper import DEFAULT_RETURN_DATE
+from helpers.take_input import get_book_details
+from helpers.constants import DEFAULT_RETURN_DATE
 
 
 class User:

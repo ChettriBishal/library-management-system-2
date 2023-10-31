@@ -1,8 +1,9 @@
 import sqlite3
-from helpers.constants_helper import USER_DB
+from helpers.constants import USER_DB
 
 
 class DBConnection:
+
     def __init__(self):
         self.connection = None
         self.host = USER_DB
@@ -75,5 +76,3 @@ def execute_query(query):
             cursor.execute(query)
         except sqlite3.Error as error:
             print(error)
-
-
