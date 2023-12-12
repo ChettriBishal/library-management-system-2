@@ -1,6 +1,5 @@
 import pytest
-from unittest.mock import patch, Mock
-from src.controllers import authentication
+from unittest.mock import patch
 from src.controllers.authentication import Authentication, checkpw, generate_uuid
 
 
