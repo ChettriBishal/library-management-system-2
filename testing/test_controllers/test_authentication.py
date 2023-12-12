@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch, Mock
 from src.controllers import authentication
-from src.controllers.authentication import Authentication, gensalt, generate_uuid
+from src.controllers.authentication import Authentication, checkpw, generate_uuid
 
 
 class TestAuthentication:
@@ -69,3 +69,11 @@ class TestAuthentication:
         capsys.readouterr()
 
         assert res is None
+
+    @pytest.mark.parametrize("res", [True, False])
+    def test_check_password(self, res, monkeypatch):
+        test_auth = Authentication("test_user", "123", "user")
+
+        with patch('src.controllers.authentication.checkpw', return_value=res):
+            res = test_auth._check_password('1231322@@')
+            assert res is res
