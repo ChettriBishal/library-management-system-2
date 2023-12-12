@@ -1,5 +1,5 @@
 import sqlite3
-from helpers.constants import USER_DB
+from src.config.constants import USER_DB
 
 
 class DBConnection:

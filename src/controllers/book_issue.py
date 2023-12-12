@@ -1,8 +1,8 @@
 import os
 import datetime
-from models.database import insert_item
-from utils import sql_query
-from utils.logs import Log
+from src.models.database import insert_item
+from src.config import sql_query
+from src.utils.logs import Log
 
 
 class BookIssue:

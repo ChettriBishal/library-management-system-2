@@ -1,13 +1,13 @@
 import maskpass
-from utils import prompts, sql_query
-from controllers.authentication import Authentication
-from helpers import take_input
-from models.database import get_item
-from controllers.user import Admin, Visitor, Librarian
-from controllers.book_issue import BookIssue
+from src.config import prompts, sql_query
+from src.controllers.authentication import Authentication
+from src.helpers import take_input
+from src.models.database import get_item
+from src.controllers.user import Admin, Visitor, Librarian
+from src.controllers.book_issue import BookIssue
 
-from utils.exceptions import UserDoesNotExist
-from models.database import get_many_items
+from src.utils.exceptions import UserDoesNotExist
+from src.models.database import get_many_items
 
 
 def home():

@@ -1,13 +1,13 @@
 import datetime
-from controllers.authentication import Authentication
-from models.database import get_many_items, get_item, remove_item
-from utils import sql_query
-from utils.exceptions import UserDoesNotExist
-from utils.uuid_generator import generate_uuid
-from controllers.book import Book
-from controllers.book_issue import BookIssue
-from helpers.take_input import get_book_details
-from helpers.constants import DEFAULT_RETURN_DATE
+from src.controllers.authentication import Authentication
+from src.models.database import get_many_items, get_item, remove_item
+from src.config import sql_query
+from src.utils.exceptions import UserDoesNotExist
+from src.utils.uuid_generator import generate_uuid
+from src.controllers.book import Book
+from src.controllers.book_issue import BookIssue
+from src.helpers.take_input import get_book_details
+from src.config.constants import DEFAULT_RETURN_DATE
 
 
 class User:

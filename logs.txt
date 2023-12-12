@@ -1,14 +1,2 @@
-30-10-2023:11:08:02 INFO     [authentication.py:36]  snow123 logged in
-30-10-2023:11:17:37 INFO     [authentication.py:36]  snow123 logged in
-30-10-2023:11:21:18 INFO     [authentication.py:50]  abc123 has signed up
-30-10-2023:11:21:24 INFO     [authentication.py:36]  abc123 logged in
-30-10-2023:11:49:32 INFO     [authentication.py:50]  test22 has signed up
-30-10-2023:11:49:45 INFO     [authentication.py:36]  Bis123 logged in
-30-10-2023:20:32:25 INFO     [authentication.py:37]  snow123 logged in
-30-10-2023:20:49:30 INFO     [authentication.py:37]  snow123 logged in
-30-10-2023:20:51:02 INFO     [book_issue.py:34]  ABC added into database
-30-10-2023:20:51:27 INFO     [authentication.py:37]  lib123 logged in
-30-10-2023:20:51:59 INFO     [book.py:33]  GHI is added into database
-30-10-2023:20:52:09 INFO     [book.py:38]  GHI is removed from database
-30-10-2023:20:52:23 INFO     [authentication.py:37]  Bis123 logged in
-30-10-2023:20:53:01 INFO     [authentication.py:58]  test333 has signed up
+12-12-2023:10:32:59 INFO     [authentication.py:58]  test_3 has signed up
+12-12-2023:10:33:09 INFO     [authentication.py:37]  test_3 logged in

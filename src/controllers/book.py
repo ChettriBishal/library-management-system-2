@@ -1,7 +1,7 @@
 import os
-from models.database import insert_item, remove_item
-from utils.sql_query import ADD_BOOK, REMOVE_BOOK_BY_ID
-from utils.logs import Log
+from src.models.database import insert_item, remove_item
+from src.config.sql_query import ADD_BOOK, REMOVE_BOOK_BY_ID
+from src.utils.logs import Log
 
 
 class Book:

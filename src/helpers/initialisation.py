@@ -1,5 +1,5 @@
-from models.database import execute_query
-from utils import sql_query
+from src.models.database import execute_query
+from src.config import sql_query
 
 
 def create_book_table() -> None:

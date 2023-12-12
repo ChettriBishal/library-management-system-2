@@ -1,9 +1,9 @@
 import os
 from bcrypt import checkpw, hashpw, gensalt
-from utils import sql_query
-from models.database import get_item, insert_item
-from utils.uuid_generator import generate_uuid
-from utils.logs import Log
+from src.config import sql_query
+from src.models.database import get_item, insert_item
+from src.utils.uuid_generator import generate_uuid
+from src.utils.logs import Log
 
 
 class Authentication:
