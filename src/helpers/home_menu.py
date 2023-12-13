@@ -18,7 +18,7 @@ def home():
         elif choice == '2':
             login()
         elif choice == '3':
-            exit(0)
+            break
         else:
             print("Enter a valid choice!")
 
