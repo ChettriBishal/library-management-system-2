@@ -1,5 +1,5 @@
 import pytest
-from unittest.mock import patch, Mock
+from unittest.mock import patch, Mock, MagicMock
 from src.controllers.user import Admin
 
 
@@ -18,3 +18,14 @@ class TestAdmin:
         capsys.readouterr()
 
         lib_obj.signup.assert_called()
+
+    @patch('src.controllers.user.get_many_items')
+    @patch('src.controllers.user.User', return_value=Mock())
+    def test_list_users(self, mock_user, mock_get_many_items, admin_obj):
+        mock_get_many_items.return_value = [('t_1', 't_1_2'), ('t_2', 't_2_1')]
+        _obj = mock_user()
+        _obj.user_details.return_value = True
+
+        admin_obj.list_users()
+
+        _obj.user_details.assert_called()
