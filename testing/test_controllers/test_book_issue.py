@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import patch
-from src.controllers.book_issue import BookIssue, datetime
+from src.controllers.book_issue import BookIssue
 
 
 class TestBookIssue:
