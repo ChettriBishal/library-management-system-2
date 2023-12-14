@@ -1,5 +1,5 @@
 import os
-import datetime
+from datetime import datetime
 from src.models.database import insert_item
 from src.config import sql_query
 from src.utils.logs import Log
@@ -30,12 +30,12 @@ class BookIssue:
 
     def add_book(self, bookname):
         insert_item(sql_query.ISSUE_BOOK_QUERY, self.get_issue_details)
-        print(f"{bookname} is successfully issued !!")
+        print(f"{bookname} is successfully issued!!")
         self.log_obj.logger.info(f"{bookname} added into database")
 
     def get_dues(self):
-        due_date = datetime.datetime.strptime(self.due_date, "%Y-%m-%d")
-        current_date = datetime.datetime.now()
+        due_date = datetime.strptime(self.due_date, "%Y-%m-%d")
+        current_date = datetime.now()
         dues = 0
         if current_date > due_date:
             delta = current_date - due_date
