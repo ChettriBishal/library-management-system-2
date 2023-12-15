@@ -1,2 +1,6 @@
 12-12-2023:10:32:59 INFO     [authentication.py:58]  test_3 has signed up
 12-12-2023:10:33:09 INFO     [authentication.py:37]  test_3 logged in
+15-12-2023:15:30:44 INFO     [authentication.py:40]  test22 entered wrong password
+15-12-2023:15:30:55 INFO     [authentication.py:40]  test22 entered wrong password
+15-12-2023:15:31:24 INFO     [authentication.py:58]  test23 has signed up
+15-12-2023:15:31:34 INFO     [authentication.py:37]  test23 logged in

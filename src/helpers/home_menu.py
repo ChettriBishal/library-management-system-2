@@ -41,7 +41,6 @@ def login():
     except UserDoesNotExist as user_error:
         print(user_error)
         home()
-        return
 
     role = role[0]
     user = Authentication(username, password, role)
