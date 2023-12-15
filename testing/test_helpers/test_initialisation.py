@@ -17,9 +17,9 @@ class TestInitialisation:
 
         mock_execute_query.assert_called()
 
-    @patch('src.helpers.initialisation.create_book_table',return_value=True)
-    @patch('src.helpers.initialisation.create_user_table',return_value=True)
-    @patch('src.helpers.initialisation.create_book_issue_table',return_value=True)
+    @patch('src.helpers.initialisation.create_book_table', return_value=True)
+    @patch('src.helpers.initialisation.create_user_table', return_value=True)
+    @patch('src.helpers.initialisation.create_book_issue_table', return_value=True)
     def test_init(self, mock_issue_table, mock_user_table, mock_book_table):
         initialisation.init_all()
 
