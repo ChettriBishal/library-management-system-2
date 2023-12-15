@@ -33,12 +33,6 @@ class TestAdmin:
 
     @patch('src.controllers.user.get_item', return_value=True)
     @patch('src.controllers.user.remove_item')
-    def test_remove_user_valid(self, mock_get_item, mock_remove_item, admin_obj, capsys):
-        admin_obj.remove_user('test_user')
-        mock_remove_item.assert_called_once()
-
-    @patch('src.controllers.user.get_item', return_value=True)
-    @patch('src.controllers.user.remove_item')
     def test_remove_user_valid(self, mock_remove_item, mock_get_item, admin_obj, capsys):
         admin_obj.remove_user('test_user')
         capsys.readouterr()
