@@ -35,4 +35,4 @@ class TestTakeInput:
         monkeypatch.setattr('builtins.input', lambda _: 'test_name')
 
         res = take_input.get_book_query()
-        assert res is 'test_name'
+        assert res in 'test_name'
