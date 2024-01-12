@@ -46,6 +46,7 @@ class Authentication:
                               (self.username, ))
         if check_user:
             print(f"Choose a different username!")
+            return None
         else:
             hashed_password = self._hash_password()
             user_info = (
@@ -56,3 +57,4 @@ class Authentication:
             )
             insert_item(sql_query.ADD_USER, user_info)
             self.log_obj.logger.info(f"{self.username} has signed up")
+            return True

@@ -13,3 +13,90 @@
 30-10-2023:20:52:23 INFO     [authentication.py:37]  Bis123 logged in
 30-10-2023:20:53:01 INFO     [authentication.py:58]  test333 has signed up
 31-10-2023:09:40:41 INFO     [authentication.py:37]  snow123 logged in
+12-01-2024:11:33:34 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:11:33:34 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:11:35:16 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 11:35:16] "[31m[1mPOST /login HTTP/1.1[0m" 422 -
+12-01-2024:11:35:41 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\user_router.py', reloading
+12-01-2024:11:35:42 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:11:35:42 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:11:36:02 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 11:36:02] "[31m[1mPOST /login HTTP/1.1[0m" 422 -
+12-01-2024:11:38:04 INFO     [_internal.py:96]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+12-01-2024:11:38:04 INFO     [_internal.py:96]  [33mPress CTRL+C to quit[0m
+12-01-2024:11:38:04 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:11:38:04 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:11:38:04 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:11:38:24 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 11:38:24] "[31m[1mPOST /login HTTP/1.1[0m" 422 -
+12-01-2024:11:40:18 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\user_router.py', reloading
+12-01-2024:11:40:18 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:11:40:19 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:11:40:19 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:11:40:22 INFO     [_internal.py:96]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+12-01-2024:11:40:22 INFO     [_internal.py:96]  [33mPress CTRL+C to quit[0m
+12-01-2024:11:40:22 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:11:40:24 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:11:40:24 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:11:40:26 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 11:40:26] "[31m[1mPOST /login HTTP/1.1[0m" 422 -
+12-01-2024:11:42:13 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\schemas.py', reloading
+12-01-2024:11:42:13 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:11:42:14 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:11:42:14 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:11:42:18 INFO     [_internal.py:96]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+12-01-2024:11:42:18 INFO     [_internal.py:96]  [33mPress CTRL+C to quit[0m
+12-01-2024:11:42:18 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:11:42:18 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:11:42:18 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:11:42:21 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 11:42:21] "[33mPOST /login HTTP/1.1[0m" 404 -
+12-01-2024:11:48:10 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\authentication.py', reloading
+12-01-2024:11:48:10 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:11:49:19 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:11:50:42 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:11:50:43 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:11:50:43 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:11:51:39 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 11:51:39] "[35m[1mPOST /signup HTTP/1.1[0m" 500 -
+12-01-2024:11:51:49 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 11:51:49] "[33mPOST /register HTTP/1.1[0m" 404 -
+12-01-2024:11:52:15 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 11:52:15] "[35m[1mPOST /signup HTTP/1.1[0m" 500 -
+12-01-2024:11:53:07 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\user_router.py', reloading
+12-01-2024:11:53:07 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:11:53:08 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:11:53:08 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:11:53:09 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 11:53:09] "POST /signup HTTP/1.1" 200 -
+12-01-2024:12:07:27 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\user_router.py', reloading
+12-01-2024:12:07:27 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:12:07:28 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:12:07:28 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:12:07:32 INFO     [_internal.py:96]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+12-01-2024:12:07:32 INFO     [_internal.py:96]  [33mPress CTRL+C to quit[0m
+12-01-2024:12:07:32 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:12:07:33 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:12:07:33 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:12:07:45 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 12:07:45] "POST /signup HTTP/1.1" 200 -
+12-01-2024:12:07:51 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 12:07:51] "POST /signup HTTP/1.1" 200 -
+12-01-2024:12:07:52 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 12:07:52] "POST /signup HTTP/1.1" 200 -
+12-01-2024:12:07:53 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 12:07:53] "POST /signup HTTP/1.1" 200 -
+12-01-2024:12:08:46 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\user_router.py', reloading
+12-01-2024:12:08:46 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:12:08:47 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:12:08:47 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:12:09:04 INFO     [_internal.py:96]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+12-01-2024:12:09:04 INFO     [_internal.py:96]  [33mPress CTRL+C to quit[0m
+12-01-2024:12:09:04 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:12:09:05 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:12:09:05 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:12:09:07 INFO     [authentication.py:59]  dummy333 has signed up
+12-01-2024:12:09:07 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 12:09:07] "POST /signup HTTP/1.1" 200 -
+12-01-2024:12:09:13 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 12:09:13] "POST /signup HTTP/1.1" 200 -
+12-01-2024:12:09:29 INFO     [authentication.py:37]  dummy333 logged in
+12-01-2024:12:09:29 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 12:09:29] "POST /login HTTP/1.1" 200 -
+12-01-2024:12:16:21 INFO     [authentication.py:59]  dummy323 has signed up
+12-01-2024:12:16:21 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 12:16:21] "POST /signup HTTP/1.1" 200 -
+12-01-2024:12:17:34 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\user_router.py', reloading
+12-01-2024:12:17:34 INFO     [_internal.py:96]   * Restarting with stat
+12-01-2024:12:17:35 WARNING  [_internal.py:96]   * Debugger is active!
+12-01-2024:12:17:35 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+12-01-2024:12:17:43 INFO     [authentication.py:59]  dummy321 has signed up
+12-01-2024:12:17:43 INFO     [_internal.py:96]  127.0.0.1 - - [12/Jan/2024 12:17:43] "POST /signup HTTP/1.1" 200 -
