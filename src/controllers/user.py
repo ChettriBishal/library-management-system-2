@@ -8,17 +8,18 @@ from src.controllers.book import Book
 from src.controllers.book_issue import BookIssue
 from src.helpers.take_input import get_book_details
 from src.config.constants import DEFAULT_RETURN_DATE
+from flask_smorest import abort
 
 
 class User:
 
-    def __init__(self, username, password, role):
-        self.username = username
-        self.password = password
-        self.role = role
-
-    def user_details(self):
-        return f"Username: {self.username} | Role: {self.role}"
+    # def __init__(self, username, password, role):
+    #     self.username = username
+    #     self.password = password
+    #     self.role = role
+    #
+    # def user_details(self):
+    #     return f"Username: {self.username} | Role: {self.role}"
 
     def query_book(self, name):
         response = get_many_items(sql_query.GET_BOOK_BY_NAME, (name, ))
@@ -26,30 +27,26 @@ class User:
 
     def sort_books_by_rating(self):
         books = get_many_items(sql_query.GET_BOOKS_BY_RATING, None)
-        books = [Book(*book) for book in books]
-        for book in books:
-            book.show_book_details()
+        books = [Book(*book).get_book_details for book in books]
+        return books
 
-    def sort_books_by_price(self) -> None:
+    def sort_books_by_price(self):
         books = get_many_items(sql_query.GET_BOOKS_BY_PRICE, None)
-        books = [Book(*book) for book in books]
-        for book in books:
-            book.show_book_details()
+        books = [Book(*book).get_book_details for book in books]
+        return books
 
     def group_books_by_genre(self, genre):
         books = get_many_items(sql_query.GROUP_BOOKS_BY_GENRE, (genre, ))
         if books is not None:
-            books = [Book(*book) for book in books]
-            for book in books:
-                book.show_book_details()
-        else:
-            print(f"Null entries for genre `{genre}`")
+            books = [Book(*book).get_book_details for book in books]
+            return books
+        abort(404, message=f"Null entries for genre `{genre}`")
 
 
 class Admin(User):
 
-    def __init__(self, username, password, role):
-        super().__init__(username, password, role)
+    # def __init__(self, username, password, role):
+    #     super().__init__(username, password, role)
 
     def register_librarian(self, username, password, user_role="librarian"):
         new_librarian = Authentication(username, password, user_role)
