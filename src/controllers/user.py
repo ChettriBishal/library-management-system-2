@@ -44,8 +44,6 @@ class User:
 
 
 class Admin(User):
-
-
     # def __init__(self, username, password, role):
     #     super().__init__(username, password, role)
 
@@ -81,7 +79,7 @@ class Admin(User):
             if check_user is None:
                 raise UserDoesNotExist(username)
             remove_item(sql_query.REMOVE_USER, (username,))
-            print(f"{username} successfully removed!!!")
+            return True
         except UserDoesNotExist as user_error:
             print(user_error)
 

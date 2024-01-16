@@ -18,3 +18,14 @@ class ListUsers(MethodView):
     def get(self):
         admin_obj = Admin()
         return admin_obj.get_users()
+
+
+@blp.route('/user/<string:user_name>')
+class RemoveUser(MethodView):
+    @restricted('admin')
+    @jwt_required()
+    def delete(self, user_name):
+        admin_obj = Admin()
+        user_removed = admin_obj.remove_user(user_name)
+        if user_removed:
+            return {"message": f"{user_name} removed"}, 200
