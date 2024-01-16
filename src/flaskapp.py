@@ -2,7 +2,8 @@ from flask import Flask, jsonify
 from flask_smorest import Api
 from flask_jwt_extended import JWTManager
 from src.routes.user_router import blp as LoginRouter
-from src.routes.books import blp as BookRoute
+from src.routes.books_routes import blp as BookRoute
+from src.routes.admin_routes import blp as AdminRoute
 
 from src.blocklist import BLOCKLIST
 
@@ -93,5 +94,6 @@ def missing_token_callback(error):
 
 api.register_blueprint(LoginRouter)
 api.register_blueprint(BookRoute)
+api.register_blueprint(AdminRoute)
 
 app.run(debug=True, port=5000)

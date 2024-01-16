@@ -769,3 +769,276 @@
 16-01-2024:12:23:22 WARNING  [_internal.py:96]   * Debugger is active!
 16-01-2024:12:23:22 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
 16-01-2024:12:24:26 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 12:24:26] "GET /user/books?filter=rating HTTP/1.1" 200 -
+16-01-2024:13:34:21 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\books.py', reloading
+16-01-2024:13:34:22 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:34:22 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:34:22 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:13:34:51 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\books.py', reloading
+16-01-2024:13:34:51 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:34:52 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:34:52 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:13:35:01 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:35:01] "[31m[1mGET /user/books?filter=rating HTTP/1.1[0m" 401 -
+16-01-2024:13:35:08 INFO     [authentication.py:37]  dummy333 logged in
+16-01-2024:13:35:08 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:35:08] "POST /login HTTP/1.1" 200 -
+16-01-2024:13:35:23 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:35:23] "GET /user/books?filter=rating HTTP/1.1" 200 -
+16-01-2024:13:35:26 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:35:26] "GET /user/books?filter=rating HTTP/1.1" 200 -
+16-01-2024:13:35:49 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\books.py', reloading
+16-01-2024:13:35:49 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:35:50 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:35:50 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:13:35:52 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:35:52] "GET /user/books?filter=rating HTTP/1.1" 200 -
+16-01-2024:13:39:58 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\books.py', reloading
+16-01-2024:13:39:58 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:39:59 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:39:59 INFO     [_internal.py:96]   * Debugger PIN: 732-976-965
+16-01-2024:13:41:44 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\books.py', reloading
+16-01-2024:13:41:44 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:41:45 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:41:45 INFO     [_internal.py:96]   * Debugger PIN: 732-976-965
+16-01-2024:13:42:27 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\books.py', reloading
+16-01-2024:13:42:27 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:42:28 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:42:28 INFO     [_internal.py:96]   * Debugger PIN: 732-976-965
+16-01-2024:13:43:14 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:43:14] "[35m[1mGET /user/books?genre=fiction HTTP/1.1[0m" 500 -
+16-01-2024:13:43:21 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\books.py', reloading
+16-01-2024:13:43:21 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:43:22 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:43:22 INFO     [_internal.py:96]   * Debugger PIN: 732-976-965
+16-01-2024:13:43:33 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\books.py', reloading
+16-01-2024:13:43:33 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:43:34 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:43:34 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:13:43:35 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:43:35] "[31m[1mGET /user/books?genre=fiction HTTP/1.1[0m" 401 -
+16-01-2024:13:43:41 INFO     [authentication.py:37]  dummy333 logged in
+16-01-2024:13:43:41 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:43:41] "POST /login HTTP/1.1" 200 -
+16-01-2024:13:43:54 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:43:54] "GET /user/books?genre=fiction HTTP/1.1" 200 -
+16-01-2024:13:47:22 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\books.py', reloading
+16-01-2024:13:47:22 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:47:22 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:47:22 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:13:48:05 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:48:05] "[31m[1mGET /user/books?name=abc HTTP/1.1[0m" 401 -
+16-01-2024:13:48:17 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:48:17] "GET /user/books?name=abc HTTP/1.1" 200 -
+16-01-2024:13:48:32 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:48:32] "GET /user/books?name=The%20Fountainhead HTTP/1.1" 200 -
+16-01-2024:13:48:40 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:48:40] "GET /user/books?name=The%20Fountainhead HTTP/1.1" 200 -
+16-01-2024:13:51:18 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\authentication.py', reloading
+16-01-2024:13:51:18 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:51:19 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:51:19 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:13:52:30 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:52:30] "[33mGET /admin/users HTTP/1.1[0m" 404 -
+16-01-2024:13:52:46 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\authentication.py', reloading
+16-01-2024:13:52:46 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:52:47 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:52:47 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:13:53:45 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\user_router.py', reloading
+16-01-2024:13:53:45 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:53:46 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:53:46 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:13:54:02 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\user_router.py', reloading
+16-01-2024:13:54:02 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:54:03 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:54:03 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:13:55:18 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\user_router.py', reloading
+16-01-2024:13:55:18 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:55:19 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:55:19 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:13:55:35 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\user_router.py', reloading
+16-01-2024:13:55:35 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:13:55:36 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:13:55:36 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:13:56:06 INFO     [authentication.py:59]  deadp1 has signed up
+16-01-2024:13:56:06 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 13:56:06] "POST /signup HTTP/1.1" 200 -
+16-01-2024:14:01:48 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:01:48] "[31m[1mGET /user/books?name=ABC HTTP/1.1[0m" 401 -
+16-01-2024:14:02:50 INFO     [authentication.py:37]  dummy333 logged in
+16-01-2024:14:02:50 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:02:50] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+16-01-2024:14:04:30 INFO     [authentication.py:37]  dummy333 logged in
+16-01-2024:14:04:30 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:04:30] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+16-01-2024:14:05:23 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\user_router.py', reloading
+16-01-2024:14:05:24 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:05:24 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:05:24 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:05:31 INFO     [authentication.py:37]  dummy333 logged in
+16-01-2024:14:05:31 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:05:31] "POST /login HTTP/1.1" 200 -
+16-01-2024:14:05:52 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:05:52] "GET /user/books?name=ABC HTTP/1.1" 200 -
+16-01-2024:14:13:15 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\user.py', reloading
+16-01-2024:14:13:15 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:13:15 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:13:15 INFO     [_internal.py:96]   * Debugger PIN: 732-976-965
+16-01-2024:14:14:15 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\admin_routes.py', reloading
+16-01-2024:14:14:15 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:14:16 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:14:16 INFO     [_internal.py:96]   * Debugger PIN: 732-976-965
+16-01-2024:14:17:44 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\user.py', reloading
+16-01-2024:14:17:44 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:17:45 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:17:45 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:22:47 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\user.py', reloading
+16-01-2024:14:22:47 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:22:49 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:22:49 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:26:55 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\admin_routes.py', reloading
+16-01-2024:14:26:55 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:26:56 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:26:56 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:29:09 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\admin_routes.py', reloading
+16-01-2024:14:29:10 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:29:11 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:29:11 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:30:39 INFO     [authentication.py:40]  Bis123 entered wrong password
+16-01-2024:14:30:39 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:30:39] "[33mPOST /login HTTP/1.1[0m" 404 -
+16-01-2024:14:30:49 INFO     [_internal.py:96]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+16-01-2024:14:30:49 INFO     [_internal.py:96]  [33mPress CTRL+C to quit[0m
+16-01-2024:14:30:49 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:30:50 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:30:50 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:30:53 INFO     [authentication.py:40]  Bis123 entered wrong password
+16-01-2024:14:30:53 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:30:53] "[33mPOST /login HTTP/1.1[0m" 404 -
+16-01-2024:14:32:58 INFO     [authentication.py:37]  deadp1 logged in
+16-01-2024:14:32:58 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:32:58] "POST /login HTTP/1.1" 200 -
+16-01-2024:14:33:19 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:33:19] "[33mGET /admin/users HTTP/1.1[0m" 404 -
+16-01-2024:14:33:40 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:33:40] "[33mGET /admin/users/all HTTP/1.1[0m" 404 -
+16-01-2024:14:33:57 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:33:57] "[33mGET /admin/users?all HTTP/1.1[0m" 404 -
+16-01-2024:14:34:35 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\admin_routes.py', reloading
+16-01-2024:14:34:35 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:34:36 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:34:36 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:34:40 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:34:40] "[33mGET /admin/users HTTP/1.1[0m" 404 -
+16-01-2024:14:34:58 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\admin_routes.py', reloading
+16-01-2024:14:34:58 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:34:59 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:34:59 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:34:59 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:34:59] "[33mGET /admin/users HTTP/1.1[0m" 404 -
+16-01-2024:14:35:03 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:35:03] "[33mGET /admin/users HTTP/1.1[0m" 404 -
+16-01-2024:14:35:08 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:35:08] "[33mGET /admin/users HTTP/1.1[0m" 404 -
+16-01-2024:14:35:41 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\admin_routes.py', reloading
+16-01-2024:14:35:41 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:35:42 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:35:42 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:35:46 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:35:46] "[33mGET /admin/users HTTP/1.1[0m" 404 -
+16-01-2024:14:36:11 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\utils\\rbac.py', reloading
+16-01-2024:14:36:11 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:36:12 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:36:12 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:36:37 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\utils\\rbac.py', reloading
+16-01-2024:14:36:37 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:36:38 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:36:38 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:37:04 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\admin_routes.py', reloading
+16-01-2024:14:37:04 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:37:05 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:37:05 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:37:23 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:37:23] "[33mGET /admin/users HTTP/1.1[0m" 404 -
+16-01-2024:14:38:06 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\user.py', reloading
+16-01-2024:14:38:06 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:38:07 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:38:07 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:38:08 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:38:08] "[33mGET /admin/users HTTP/1.1[0m" 404 -
+16-01-2024:14:38:14 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\user.py', reloading
+16-01-2024:14:38:14 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:38:15 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:38:15 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:38:18 INFO     [_internal.py:96]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+16-01-2024:14:38:18 INFO     [_internal.py:96]  [33mPress CTRL+C to quit[0m
+16-01-2024:14:38:18 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:38:19 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:38:19 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:38:22 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:38:22] "[33mGET /admin/users HTTP/1.1[0m" 404 -
+16-01-2024:14:38:30 INFO     [authentication.py:37]  deadp1 logged in
+16-01-2024:14:38:30 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:38:30] "POST /login HTTP/1.1" 200 -
+16-01-2024:14:38:50 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:38:50] "[33mGET /admin/users HTTP/1.1[0m" 404 -
+16-01-2024:14:40:09 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\admin_routes.py', reloading
+16-01-2024:14:40:09 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:40:10 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:40:10 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:40:19 INFO     [_internal.py:96]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+16-01-2024:14:40:19 INFO     [_internal.py:96]  [33mPress CTRL+C to quit[0m
+16-01-2024:14:40:19 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:40:20 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:40:20 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:40:24 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:40:24] "[33mGET /admin/users HTTP/1.1[0m" 404 -
+16-01-2024:14:41:44 INFO     [_internal.py:96]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+16-01-2024:14:41:44 INFO     [_internal.py:96]  [33mPress CTRL+C to quit[0m
+16-01-2024:14:41:44 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:41:45 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:41:45 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:41:47 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:41:47] "[31m[1mGET /admin/users HTTP/1.1[0m" 401 -
+16-01-2024:14:41:59 INFO     [authentication.py:37]  deadp1 logged in
+16-01-2024:14:41:59 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:41:59] "POST /login HTTP/1.1" 200 -
+16-01-2024:14:42:16 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:42:16] "[31m[1mGET /admin/users HTTP/1.1[0m" 401 -
+16-01-2024:14:42:18 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:42:18] "[31m[1mGET /admin/users HTTP/1.1[0m" 401 -
+16-01-2024:14:44:32 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\utils\\rbac.py', reloading
+16-01-2024:14:44:32 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:44:33 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:44:33 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:44:42 INFO     [_internal.py:96]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+16-01-2024:14:44:42 INFO     [_internal.py:96]  [33mPress CTRL+C to quit[0m
+16-01-2024:14:44:42 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:44:43 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:44:43 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:44:49 INFO     [authentication.py:37]  deadp1 logged in
+16-01-2024:14:44:49 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:44:49] "POST /login HTTP/1.1" 200 -
+16-01-2024:14:45:02 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:45:02] "[35m[1mGET /admin/users HTTP/1.1[0m" 500 -
+16-01-2024:14:48:35 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\user.py', reloading
+16-01-2024:14:48:35 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:48:37 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:48:37 INFO     [_internal.py:96]   * Debugger PIN: 732-976-965
+16-01-2024:14:48:42 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\user.py', reloading
+16-01-2024:14:48:42 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:48:43 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:48:43 INFO     [_internal.py:96]   * Debugger PIN: 732-976-965
+16-01-2024:14:50:44 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\user.py', reloading
+16-01-2024:14:50:44 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:50:45 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:50:45 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:50:49 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\user.py', reloading
+16-01-2024:14:50:49 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:50:50 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:50:50 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:53:32 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\user.py', reloading
+16-01-2024:14:53:32 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:53:33 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:53:33 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:53:39 INFO     [_internal.py:96]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+16-01-2024:14:53:39 INFO     [_internal.py:96]  [33mPress CTRL+C to quit[0m
+16-01-2024:14:53:39 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:53:40 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:53:40 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:53:49 INFO     [authentication.py:37]  deadp1 logged in
+16-01-2024:14:53:49 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:53:49] "POST /login HTTP/1.1" 200 -
+16-01-2024:14:54:05 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:54:05] "[35m[1mGET /admin/users HTTP/1.1[0m" 500 -
+16-01-2024:14:55:14 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\user.py', reloading
+16-01-2024:14:55:14 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:55:15 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:55:15 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:55:24 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:55:24] "[35m[1mGET /admin/users HTTP/1.1[0m" 500 -
+16-01-2024:14:55:34 INFO     [_internal.py:96]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+16-01-2024:14:55:34 INFO     [_internal.py:96]  [33mPress CTRL+C to quit[0m
+16-01-2024:14:55:34 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:55:34 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:55:34 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:55:40 INFO     [authentication.py:37]  deadp1 logged in
+16-01-2024:14:55:40 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:55:40] "POST /login HTTP/1.1" 200 -
+16-01-2024:14:55:53 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:55:53] "[35m[1mGET /admin/users HTTP/1.1[0m" 500 -
+16-01-2024:14:57:26 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\user.py', reloading
+16-01-2024:14:57:26 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:57:27 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:57:27 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:57:36 INFO     [_internal.py:96]  127.0.0.1 - - [16/Jan/2024 14:57:36] "GET /admin/users HTTP/1.1" 200 -
+16-01-2024:14:59:03 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\admin_routes.py', reloading
+16-01-2024:14:59:03 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:59:04 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:59:04 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:59:09 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\routes\\admin_routes.py', reloading
+16-01-2024:14:59:09 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:59:10 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:59:10 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+16-01-2024:14:59:33 INFO     [_internal.py:96]   * Detected change in 'C:\\Users\\bchettri\\OneDrive - WatchGuard Technologies Inc\\Documents\\library-management-system-2\\src\\controllers\\user.py', reloading
+16-01-2024:14:59:33 INFO     [_internal.py:96]   * Restarting with stat
+16-01-2024:14:59:34 WARNING  [_internal.py:96]   * Debugger is active!
+16-01-2024:14:59:34 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574

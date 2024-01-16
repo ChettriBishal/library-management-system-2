@@ -16,8 +16,8 @@ class UserLogin(MethodView):
         auth = Authentication(user_data['username'], user_data['password'], user_data['role'])
         logged_in = auth.login()
         if logged_in:
-            access_token = create_access_token(identity=logged_in[0], fresh=True)
-            refresh_token = create_refresh_token(identity=logged_in[0])
+            access_token = create_access_token(identity=logged_in[0], fresh=True, additional_claims={"role": user_data['role']})
+            refresh_token = create_refresh_token(identity=logged_in[0], additional_claims={"role": user_data['role']})
             return {"access_token": access_token, "refresh_token": refresh_token}, 200
         abort(404, message="User not found")
 
@@ -38,8 +38,9 @@ class UserSignUp(MethodView):
     @blp.arguments(UserSchema)
     def post(self, user_data):
         auth = Authentication(user_data['username'], user_data['password'], user_data['role'])
-        if auth.signup():
-            return {"message": f"{user_data['username']} signed up"}
+        signed_up = auth.signup()
+        if signed_up:
+            return {"message": f"{user_data['username']} signed up, uuid {signed_up}"}
         return {"message": "error"}
 
 

@@ -13,18 +13,35 @@ blp = Blueprint("Books", __name__, description="Operation on books")
 
 
 @blp.route('/user/books')
-class Books(MethodView):
+class BooksFilter(MethodView):
     @jwt_required()
     @blp.response(200)
     def get(self):
         filter = request.args.get('filter')
+        genre = request.args.get('genre')
+        bookname = request.args.get('name')
         user_data_access = User()
-        if filter == 'price':
-            return user_data_access.sort_books_by_price()
-        elif filter == 'rating':
-            return user_data_access.sort_books_by_rating()
+        if filter:
+            if filter == 'price':
+                return user_data_access.sort_books_by_price()
+            elif filter == 'rating':
+                return user_data_access.sort_books_by_rating()
+            abort(404, message="Books not found")
+        elif genre:
+            return user_data_access.group_books_by_genre(genre)
+        elif bookname:
+            return user_data_access.query_book(bookname)
+
         # if request_data['']
         # return user_data_access.sort_books_by_rating()
+
+
+# @blp.route('/user/books')
+# class BookByName(MethodView):
+#     @jwt_required()
+#     @blp.response(200)
+#     def get(self):
+
 
 
 
