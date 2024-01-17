@@ -1,6 +1,6 @@
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
-from flask_jwt_extended import create_access_token, create_refresh_token, get_jwt_identity, jwt_required, get_jwt
+from flask_jwt_extended import jwt_required, get_jwt
 from flask import request
 from src.schemas import UserSchema
 from src.controllers.authentication import Authentication
@@ -17,7 +17,7 @@ class ListUsers(MethodView):
     @jwt_required()
     def get(self):
         admin_obj = Admin()
-        return admin_obj.get_users()
+        return admin_obj.get_users(), 200
 
 
 @blp.route('/user/<string:user_name>')
@@ -29,3 +29,14 @@ class RemoveUser(MethodView):
         user_removed = admin_obj.remove_user(user_name)
         if user_removed:
             return {"message": f"{user_name} removed"}, 200
+
+
+@blp.route('/register/librarian')
+class RegisterLibrarian(MethodView):
+    @blp.arguments(UserSchema)
+    def post(self, user_data):
+        auth = Authentication(user_data['username'], user_data['password'], user_data['role'])
+        signed_up = auth.signup()
+        if signed_up:
+            return {"message": f"Librarian {user_data['username']} registered, uuid {signed_up}"}
+        return {"message": "choose different username"}, 409

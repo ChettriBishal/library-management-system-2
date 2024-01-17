@@ -4,3 +4,4 @@ Flask-SQLAlchemy
 marshmallow
 python-dotenv
 passlib
+requests

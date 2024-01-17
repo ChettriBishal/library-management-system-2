@@ -7,8 +7,11 @@ class UserSchema(Schema):
     role = fields.Str(required=True)
 
 
+class UserRegisterSchema(UserSchema):
+    email = fields.Str(required=True)
+
+
 class BookSchema(Schema):
-    book_id = fields.Str(required=True)
     name = fields.Str(required=True)
     author = fields.Str(required=True)
     price = fields.Float(required=True)

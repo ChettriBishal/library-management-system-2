@@ -4,13 +4,15 @@ from flask_jwt_extended import JWTManager
 from src.routes.user_router import blp as LoginRouter
 from src.routes.books_routes import blp as BookRoute
 from src.routes.admin_routes import blp as AdminRoute
+from src.routes.librarian_routes import blp as LibrarianRoute
+from src.routes.visitor_routes import blp as VisitorRoute
 
 from src.blocklist import BLOCKLIST
 
 app = Flask(__name__)
 app.app_context().push()
 
-app.config["API_TITLE"] = "Stores REST API"
+app.config["API_TITLE"] = "LMS API"
 app.config["API_VERSION"] = "v1"
 app.config["OPENAPI_VERSION"] = "3.0.3"
 app.config["OPENAPI_URL_PREFIX"] = "/"
@@ -95,5 +97,7 @@ def missing_token_callback(error):
 api.register_blueprint(LoginRouter)
 api.register_blueprint(BookRoute)
 api.register_blueprint(AdminRoute)
+api.register_blueprint(LibrarianRoute)
+api.register_blueprint(VisitorRoute)
 
 app.run(debug=True, port=5000)

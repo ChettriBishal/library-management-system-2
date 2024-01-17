@@ -37,6 +37,10 @@ INSERT INTO books VALUES(?,?,?,?,?,?)
 REMOVE_BOOK_BY_ID = """
 DELETE FROM books WHERE book_id = ?
 """
+REMOVE_BOOK_BY_NAME = """
+DELETE FROM books WHERE name = ?
+"""
+
 
 CREATE_USER_TABLE = """
 CREATE TABLE IF NOT EXISTS users(user_id text primary key, username text,password text, role text)

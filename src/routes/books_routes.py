@@ -6,7 +6,7 @@ from flask_jwt_extended import create_access_token, jwt_required, get_jwt
 from src.controllers.book import Book
 from src.controllers.user import User
 
-from src.schemas import BookSchema
+
 from src.controllers.authentication import Authentication
 
 blp = Blueprint("Books", __name__, description="Operation on books")
