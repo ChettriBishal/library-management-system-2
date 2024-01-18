@@ -11,6 +11,8 @@ from src.blocklist import BLOCKLIST
 blp = Blueprint("Users", __name__, description="Operation on users")
 
 
+@blp.doc(parameters=[{'name': 'Authorization', 'in': 'header', 'description': 'Authorization: Bearer <access_token>',
+                      'required': 'true'}])
 def send_simple_message(to, subject, body):
     domain = os.getenv("MAILGUN_DOMAIN")
     return requests.post(
@@ -74,5 +76,3 @@ class UserLogout(MethodView):
         jti = get_jwt()["jti"]
         BLOCKLIST.add(jti)
         return {"message": "Successfully logged out"}
-
-
