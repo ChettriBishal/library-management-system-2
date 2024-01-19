@@ -5,17 +5,17 @@ from src.controllers.book import Book
 from src.schemas import BookSchema
 from src.utils.rbac import restricted
 from src.controllers.user import Librarian
+from src.config.constants import authorization_bearer
 
 blp = Blueprint('Librarian', __name__, description='Routes for librarian')
 
 
-@blp.doc(parameters=[{'name': 'Authorization', 'in': 'header', 'description': 'Authorization: Bearer <access_token>',
-                      'required': 'true'}])
 # @blp.arguments(BookSchema)
 @blp.route('/books')
 class AddBook(MethodView):
     @restricted('librarian')
     @jwt_required()
+    @blp.doc(parameters=authorization_bearer)
     @blp.arguments(BookSchema)
     def post(self, book_data):
         book_obj = Book(book_data['name'], book_data['author'], book_data['rating'], book_data['price'],
@@ -30,6 +30,7 @@ class AddBook(MethodView):
 class RemoveBook(MethodView):
     @restricted('librarian')
     @jwt_required()
+    @blp.doc(parameters=authorization_bearer)
     def delete(self, book_name):
         status = Librarian().remove_book(book_name)
         if status:

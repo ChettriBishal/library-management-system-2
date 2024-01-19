@@ -7,6 +7,7 @@ from src.controllers.authentication import Authentication
 from src.blocklist import BLOCKLIST
 from src.utils.rbac import restricted
 from src.controllers.user import Admin
+from src.config.constants import authorization_bearer
 
 blp = Blueprint("Admin", __name__, description="Operation performed via admin")
 
@@ -15,6 +16,7 @@ blp = Blueprint("Admin", __name__, description="Operation performed via admin")
 class ListUsers(MethodView):
     @restricted('admin')
     @jwt_required()
+    @blp.doc(parameters=authorization_bearer)
     def get(self):
         admin_obj = Admin()
         return admin_obj.get_users(), 200
@@ -24,6 +26,7 @@ class ListUsers(MethodView):
 class RemoveUser(MethodView):
     @restricted('admin')
     @jwt_required()
+    @blp.doc(parameters=authorization_bearer)
     def delete(self, user_name):
         admin_obj = Admin()
         user_removed = admin_obj.remove_user(user_name)
@@ -34,6 +37,7 @@ class RemoveUser(MethodView):
 @blp.route('/register/librarian')
 class RegisterLibrarian(MethodView):
     @blp.arguments(UserSchema)
+    @blp.doc(parameters=authorization_bearer)
     def post(self, user_data):
         auth = Authentication(user_data['username'], user_data['password'], user_data['role'])
         signed_up = auth.signup()
