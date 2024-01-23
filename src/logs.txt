@@ -1775,3 +1775,4 @@
 19-01-2024:16:39:22 INFO     [_internal.py:96]  127.0.0.1 - - [19/Jan/2024 16:39:22] "[31m[1mGET /signup HTTP/1.1[0m" 405 -
 19-01-2024:16:39:53 INFO     [_internal.py:96]  127.0.0.1 - - [19/Jan/2024 16:39:53] "GET /swagger-ui HTTP/1.1" 200 -
 19-01-2024:16:39:57 INFO     [_internal.py:96]  127.0.0.1 - - [19/Jan/2024 16:39:57] "GET /openapi.json HTTP/1.1" 200 -
+23-01-2024:11:47:59 INFO     [authentication.py:37]  deadp1 logged in
