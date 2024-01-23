@@ -1769,3 +1769,9 @@
 19-01-2024:15:57:12 INFO     [_internal.py:96]   * Restarting with stat
 19-01-2024:15:57:14 WARNING  [_internal.py:96]   * Debugger is active!
 19-01-2024:15:57:14 INFO     [_internal.py:96]   * Debugger PIN: 124-385-574
+19-01-2024:16:37:51 INFO     [_internal.py:96]  127.0.0.1 - - [19/Jan/2024 16:37:51] "[33mGET / HTTP/1.1[0m" 404 -
+19-01-2024:16:37:51 INFO     [_internal.py:96]  127.0.0.1 - - [19/Jan/2024 16:37:51] "[33mGET / HTTP/1.1[0m" 404 -
+19-01-2024:16:39:05 INFO     [_internal.py:96]  127.0.0.1 - - [19/Jan/2024 16:39:05] "[31m[1mGET /signup HTTP/1.1[0m" 405 -
+19-01-2024:16:39:22 INFO     [_internal.py:96]  127.0.0.1 - - [19/Jan/2024 16:39:22] "[31m[1mGET /signup HTTP/1.1[0m" 405 -
+19-01-2024:16:39:53 INFO     [_internal.py:96]  127.0.0.1 - - [19/Jan/2024 16:39:53] "GET /swagger-ui HTTP/1.1" 200 -
+19-01-2024:16:39:57 INFO     [_internal.py:96]  127.0.0.1 - - [19/Jan/2024 16:39:57] "GET /openapi.json HTTP/1.1" 200 -
