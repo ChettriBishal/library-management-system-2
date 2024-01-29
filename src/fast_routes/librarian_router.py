@@ -1,12 +1,12 @@
 from fastapi import APIRouter, HTTPException
-from fast_schemas import BookSchema, BookNameSchema
+from .fast_schemas import BookSchema, BookNameSchema
 from controllers.book import Book
 from controllers.user import Librarian
 
 lib_route = APIRouter(tags=['Routes for librarian'])
 
 
-@lib_route.post('/books')
+@lib_route.post('/librarian/books')
 def add_new_book(book_data: BookSchema):
     book_data = book_data.model_dump()
     book_obj = Book(book_data['name'], book_data['author'], book_data['rating'], book_data['price'],

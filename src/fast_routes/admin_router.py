@@ -1,9 +1,9 @@
-from fast_schemas import UserSchema
+from .fast_schemas import UserSchema
 from controllers.authentication import Authentication
 
 from controllers.user import Admin
 
-from fastapi import APIRouter, Body, HTTPException
+from fastapi import APIRouter, HTTPException
 
 admin_route = APIRouter()
 
