@@ -26,7 +26,7 @@ class Authentication:
 
     def login(self):
         check_user = get_item(sql_query.GET_USER_BY_USERNAME,
-                              (self.username, ))
+                              (self.username,))
         if check_user is None:
             print(f"User with username `{self.username}` does not exist!")
         else:
@@ -43,7 +43,7 @@ class Authentication:
 
     def signup(self):
         check_user = get_item(sql_query.GET_USER_BY_USERNAME,
-                              (self.username, ))
+                              (self.username,))
         if check_user:
             print(f"Choose a different username!")
             return None
@@ -57,4 +57,4 @@ class Authentication:
             )
             insert_item(sql_query.ADD_USER, user_info)
             self.log_obj.logger.info(f"{self.username} has signed up")
-            return user_info[0] # return the uuid
+            return user_info[0]  # return the uuid

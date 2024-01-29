@@ -1,8 +1,8 @@
 import os
-from src.models.database import insert_item, remove_item
-from src.config.sql_query import ADD_BOOK, REMOVE_BOOK_BY_ID, REMOVE_BOOK_BY_NAME
-from src.utils.logs import Log
-from src.utils.uuid_generator import generate_uuid
+from models.database import insert_item, remove_item
+from config.sql_query import ADD_BOOK, REMOVE_BOOK_BY_ID, REMOVE_BOOK_BY_NAME
+from utils.logs import Log
+from utils.uuid_generator import generate_uuid
 
 
 class Book:

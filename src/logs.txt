@@ -1777,3 +1777,14 @@
 19-01-2024:16:39:57 INFO     [_internal.py:96]  127.0.0.1 - - [19/Jan/2024 16:39:57] "GET /openapi.json HTTP/1.1" 200 -
 23-01-2024:11:47:59 INFO     [authentication.py:37]  deadp1 logged in
 23-01-2024:11:52:55 INFO     [authentication.py:59]  greater has signed up
+29-01-2024:10:07:08 INFO     [authentication.py:59]  greater2 has signed up
+29-01-2024:10:15:01 INFO     [authentication.py:59]  dummyalways has signed up
+29-01-2024:10:22:15 INFO     [authentication.py:37]  greater logged in
+29-01-2024:10:54:49 INFO     [authentication.py:37]  greater logged in
+29-01-2024:10:55:10 INFO     [authentication.py:37]  greater logged in
+29-01-2024:10:55:28 INFO     [authentication.py:59]  dummynever has signed up
+29-01-2024:11:16:56 INFO     [authentication.py:59]  lib4512 has signed up
+29-01-2024:11:30:01 INFO     [book.py:34]  Theory of everything is added into database
+29-01-2024:11:34:24 INFO     [book.py:45]  Theory of everything is removed from database
+29-01-2024:11:34:32 INFO     [book.py:34]  Theory of everything is added into database
+29-01-2024:11:35:54 INFO     [book.py:34]  A brief history of time is added into database
