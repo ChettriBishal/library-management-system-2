@@ -1,10 +1,10 @@
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query, status
 from controllers.user import User
 
 book_route = APIRouter(tags=['Routes for books'])
 
 
-@book_route.get('/books')
+@book_route.get('/books', status_code=status.HTTP_200_OK)
 async def get_books(filter: str = Query(None, description='Filter books by price or rating'),
     genre: str = Query(None, description='Filter books by genre'),
     bookname: str = Query(None, description='Search for a specific book by name')

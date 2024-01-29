@@ -1,10 +1,10 @@
-from fastapi import APIRouter, Body, HTTPException
+from fastapi import APIRouter, Body, HTTPException, status
 from controllers.authentication import Authentication
 
 user_route = APIRouter(tags=['User routes for authentication'])
 
 
-@user_route.post('/login')
+@user_route.post('/login', status_code=status.HTTP_200_OK)
 async def login_user(user_data=Body()):
     auth = Authentication(user_data['username'], user_data['password'], user_data['role'])
     logged_in = auth.login()
@@ -14,7 +14,7 @@ async def login_user(user_data=Body()):
         raise HTTPException(404, detail="User not found")
 
 
-@user_route.post('/signup')
+@user_route.post('/signup', status_code=status.HTTP_201_CREATED)
 async def signup_user(user_data=Body()):
     auth = Authentication(user_data['username'], user_data['password'], user_data['role'])
     signed_up = auth.signup()
