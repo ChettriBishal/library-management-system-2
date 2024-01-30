@@ -40,6 +40,8 @@ def remove_user(user: user_dependency, user_name: str):
 def register_librarian(user: user_dependency, user_data: UserSchema):
     if user is None:
         raise HTTPException(401, "Authentication Failed")
+    if user.get('role') != 'admin':
+        raise HTTPException(401, "Unauthorized to perform this action")
 
     user_data = user_data.model_dump()
     auth = Authentication(user_data['username'], user_data['password'], user_data['role'])

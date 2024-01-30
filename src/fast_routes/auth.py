@@ -68,14 +68,12 @@ async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm,
 
 @auth_route.post("/token", response_model=Token)
 async def login_for_access_token(
-        form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
-        role: str = Form(...),
-):
-    user = authenticate_user(form_data.username, form_data.password, role)
+        form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
+    user = authenticate_user(form_data.username, form_data.password, 'admin')
     if not user:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail='Could not validate user.')
     access_token_obj = AccessToken()
-    token = access_token_obj.create_access_token(form_data.username, role)
+    token = access_token_obj.create_access_token(form_data.username, 'admin')
 
     return {'access_token': token, 'token_type': 'bearer'}
