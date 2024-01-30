@@ -1,7 +1,7 @@
 import os
 from datetime import timedelta
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, status, Form
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from typing import Annotated
 from fastapi import APIRouter, Body, HTTPException, status
@@ -54,11 +54,27 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)]):
 
 
 @auth_route.post("/login", response_model=Token)
-async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
-    user = authenticate_user(form_data.username, form_data.password, 'visitor')
+async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
+                                 role: str = Form(...)):
+    user = authenticate_user(form_data.username, form_data.password, role)
     if not user:
         return {"message": "Failed Authentication"}
     access_token_obj = AccessToken()
     token = access_token_obj.create_access_token(form_data.username, timedelta(minutes=20))
 
     return {"access_token": token, "token_type": "bearer"}
+
+
+@auth_route.post("/token", response_model=Token)
+async def login_for_access_token(
+        form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
+        role: str = Form(...),
+):
+    user = authenticate_user(form_data.username, form_data.password, role)
+    if not user:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
+                            detail='Could not validate user.')
+    access_token_obj = AccessToken()
+    token = access_token_obj.create_access_token(form_data.username)
+
+    return {'access_token': token, 'token_type': 'bearer'}
