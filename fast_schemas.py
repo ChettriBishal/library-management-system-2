@@ -31,3 +31,8 @@ class BookSchema(BaseModel):
     price: float
     rating: int = Field(gt=-1, lt=11)
     genre: str
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str

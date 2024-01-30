@@ -1,5 +1,6 @@
 import re
 from pydantic import BaseModel, Field, field_validator
+
 pwd_regexp = r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
 
 
@@ -31,3 +32,8 @@ class BookSchema(BaseModel):
     price: float
     rating: int = Field(gt=-1, lt=11)
     genre: str
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str

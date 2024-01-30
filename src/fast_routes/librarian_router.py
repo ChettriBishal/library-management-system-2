@@ -1,9 +1,12 @@
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, status, Depends
 from .fast_schemas import BookSchema, BookNameSchema
 from controllers.book import Book
 from controllers.user import Librarian
+from typing import Annotated
 
 lib_route = APIRouter(tags=['Routes for librarian'])
+
+# user_dependency = Annotated[dict, Depends(get_current_)]
 
 
 @lib_route.post('/librarian/books', status_code=status.HTTP_201_CREATED)
