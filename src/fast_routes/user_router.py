@@ -12,7 +12,7 @@ async def login_user(user_data=Body()):
     logged_in = auth.login()
     if logged_in:
         access_token_object = AccessToken()
-        token = access_token_object.create_access_token(user_data['username'])  # create jwt token
+        token = access_token_object.create_access_token(user_data['username'], user_data['role'])  # create jwt token
         return {"access_token": token, "token_type": 'bearer'}
         # return {"message": f"{user_data['username']} has logged in!"}
     else:

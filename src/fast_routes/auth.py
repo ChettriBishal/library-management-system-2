@@ -45,10 +45,11 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)]):
         load_dotenv()
         payload = jwt.decode(token, os.getenv('SECRET_KEY'), algorithms=[os.getenv('ALGORITHM')])
         username: str = payload.get('sub')
+        role: str = payload.get('role')
         if username is None:
             raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail='Could not validate credentials')
 
-        return {'username': username}
+        return {'username': username, 'role': role}
     except JWTError:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail='Could not validate credentials')
 
@@ -60,7 +61,7 @@ async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm,
     if not user:
         return {"message": "Failed Authentication"}
     access_token_obj = AccessToken()
-    token = access_token_obj.create_access_token(form_data.username, timedelta(minutes=20))
+    token = access_token_obj.create_access_token(form_data.username, role, timedelta(minutes=20))
 
     return {"access_token": token, "token_type": "bearer"}
 
@@ -75,6 +76,6 @@ async def login_for_access_token(
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail='Could not validate user.')
     access_token_obj = AccessToken()
-    token = access_token_obj.create_access_token(form_data.username)
+    token = access_token_obj.create_access_token(form_data.username, role)
 
     return {'access_token': token, 'token_type': 'bearer'}

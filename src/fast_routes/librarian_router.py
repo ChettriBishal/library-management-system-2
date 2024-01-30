@@ -26,7 +26,10 @@ def add_new_book(user: user_dependency, book_data: BookSchema):
 
 
 @lib_route.delete('/books', status_code=status.HTTP_200_OK)
-def remove_book(book_name: BookNameSchema):
+def remove_book(user: user_dependency, book_name: BookNameSchema):
+    if user is None:
+        raise HTTPException(status_code=401, detail="Authentication failed")
+
     book_name = book_name.model_dump()
     book_name = book_name['name']
     status = Librarian().remove_book(book_name)
