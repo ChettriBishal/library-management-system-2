@@ -54,16 +54,16 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)]):
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail='Could not validate credentials')
 
 
-@auth_route.post("/login", response_model=Token)
-async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
-                                 role: str = Form(...)):
-    user = authenticate_user(form_data.username, form_data.password, role)
-    if not user:
-        return {"message": "Failed Authentication"}
-    access_token_obj = AccessToken()
-    token = access_token_obj.create_access_token(form_data.username, role, timedelta(minutes=20))
-
-    return {"access_token": token, "token_type": "bearer"}
+# @auth_route.post("/login", response_model=Token)
+# async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
+#                                  role: str = Form(...)):
+#     user = authenticate_user(form_data.username, form_data.password, role)
+#     if not user:
+#         return {"message": "Failed Authentication"}
+#     access_token_obj = AccessToken()
+#     token = access_token_obj.create_access_token(form_data.username, role, timedelta(minutes=20))
+#
+#     return {"access_token": token, "token_type": "bearer"}
 
 
 @auth_route.post("/token", response_model=Token)

@@ -9,12 +9,12 @@ user_route = APIRouter(tags=['User routes for authentication'])
 @user_route.post('/login', status_code=status.HTTP_200_OK, response_model=Token)
 async def login_user(user_data=Body()):
     auth = Authentication(user_data['username'], user_data['password'], user_data['role'])
+    print(user_data)
     logged_in = auth.login()
     if logged_in:
         access_token_object = AccessToken()
         token = access_token_object.create_access_token(user_data['username'], user_data['role'])  # create jwt token
         return {"access_token": token, "token_type": 'bearer'}
-        # return {"message": f"{user_data['username']} has logged in!"}
     else:
         raise HTTPException(404, detail="User not found")
 

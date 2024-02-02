@@ -21,12 +21,15 @@ user_dependency = Annotated[dict, Depends(get_current_user)]
 async def list_users(user: user_dependency):
     if user is None:
         raise HTTPException(401, "Authentication Failed")
+    if user.get('role') != 'admin':
+        raise HTTPException(401, "User should be admin to view all users")
     admin_obj = Admin()
     return admin_obj.get_users(), 200
 
 
 @admin_route.delete('/user/{user_name}', status_code=status.HTTP_200_OK)
 def remove_user(user: user_dependency, user_name: str):
+
     if user is None:
         raise HTTPException(401, "Authentication Failed")
 
