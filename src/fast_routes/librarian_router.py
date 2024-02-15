@@ -20,7 +20,8 @@ def add_new_book(user: user_dependency, book_data: BookSchema):
                     book_data['genre'])
     book_added = book_obj.add_book()
     if book_added:
-        return {"message": f"Book added {book_obj.name}"}, 200
+        # return {"message": f"Book added {book_obj.name}"}, 200
+        return {"name": book_obj.name}, 200
     else:
         raise HTTPException(400, detail=f"Something went wrong")
 

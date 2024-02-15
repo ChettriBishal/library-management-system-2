@@ -9,7 +9,6 @@ user_route = APIRouter(tags=['User routes for authentication'])
 @user_route.post('/login', status_code=status.HTTP_200_OK, response_model=Token)
 async def login_user(user_data=Body()):
     auth = Authentication(user_data['username'], user_data['password'], user_data['role'])
-    print(user_data)
     logged_in = auth.login()
     if logged_in:
         access_token_object = AccessToken()
@@ -24,6 +23,9 @@ async def signup_user(user_data=Body()):
     auth = Authentication(user_data['username'], user_data['password'], user_data['role'])
     signed_up = auth.signup()
     if signed_up:
-        return {"message": f"{user_data['username']} signed up, uuid {signed_up}"}
+        # return {"message": f"{user_data['username']} signed up, uuid {signed_up}"}
+        return {"username": user_data['username'], "uuid": signed_up}
+    elif not signed_up:
+        raise HTTPException(409, detail="User with these credentials already exists")
     else:
         raise HTTPException(422, detail="Check the user inputs")

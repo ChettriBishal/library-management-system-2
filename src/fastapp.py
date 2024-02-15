@@ -19,4 +19,6 @@ app.include_router(book_route)
 app.include_router(auth_route)
 
 
-
+@app.get("/")
+async def server_status():
+    return {"message": "Server is running"}

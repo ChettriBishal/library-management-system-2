@@ -22,7 +22,7 @@ async def list_users(user: user_dependency):
     if user is None:
         raise HTTPException(401, "Authentication Failed")
     if user.get('role') != 'admin':
-        raise HTTPException(401, "User should be admin to view all users")
+        raise HTTPException(401, "Requires admin privilege.")
     admin_obj = Admin()
     return admin_obj.get_users(), 200
 
@@ -32,6 +32,9 @@ def remove_user(user: user_dependency, user_name: str):
 
     if user is None:
         raise HTTPException(401, "Authentication Failed")
+
+    if user.get('role') != 'admin':
+        raise HTTPException(401, "Requires admin privilege.")
 
     admin_obj = Admin()
     user_removed = admin_obj.remove_user(user_name)
@@ -44,12 +47,13 @@ def register_librarian(user: user_dependency, user_data: UserSchema):
     if user is None:
         raise HTTPException(401, "Authentication Failed")
     if user.get('role') != 'admin':
-        raise HTTPException(401, "Unauthorized to perform this action")
+        raise HTTPException(401, "Requires admin privilege.")
 
     user_data = user_data.model_dump()
     auth = Authentication(user_data['username'], user_data['password'], user_data['role'])
     signed_up = auth.signup()
     if signed_up:
-        return {"message": f"Librarian {user_data['username']} registered, uuid {signed_up}"}
+        # return {"message": f"Librarian {user_data['username']} registered, uuid {signed_up}"}
+        return {"username": user_data['username'], "uuid": signed_up}
     else:
         raise HTTPException(409, detail="Username already exists!")
